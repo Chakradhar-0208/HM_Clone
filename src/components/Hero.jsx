@@ -22,7 +22,7 @@ export default function Hero() {
               <div className="w-full h-[81vh] bg-[#000000c5] absolute lg:top-32 top-41 z-500"></div>
 
 
-              <div className="   flex  justify-end lg:-mt-[112.15px] -mt-[242.2px] relative">
+              <div className="  flex  justify-end lg:-mt-[112.15px] -mt-[242.2px] relative">
                 <div className="  flex flex-col items-end  relative  h-60 w-full sm:w-[360px] justify-evenly px-9  bg-white z-500 text-gray-600 ">
                   <p className="hover:text-black">LADIES</p>
                   <p className="hover:text-black">MEN</p>

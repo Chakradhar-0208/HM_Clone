@@ -6,6 +6,7 @@ import Ladies from "./components/Ladies";
 import Men from "./components/Men";
 import Kids from "./components/Kids";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/kids" element={<Kids />} />
         <Route path="/home" element={<Home />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
