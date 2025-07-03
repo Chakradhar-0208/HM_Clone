@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 export default function Ladies() {
   return (
     <>
-      <div className="flex flex-col w-full md:flex-row">
+      <div className="flex flex-col w-full md:flex-row"> 
         <Link to="/ladies/resortEssentials">
           <div>
             <img
