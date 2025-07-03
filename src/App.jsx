@@ -12,7 +12,7 @@ import Kids from "./components/Kids";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import LadiesSection from "./components/LadiesSection";
-import MenSection from "./components/MenSection";
+// import MenSection from "./components/MenSection";
 
 function AppContent() {
   const location = useLocation();
