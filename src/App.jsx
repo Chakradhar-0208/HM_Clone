@@ -12,7 +12,6 @@ import Kids from "./components/Kids";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import LadiesSection from "./components/LadiesSection";
-// import MenSection from "./components/MenSection";
 
 function AppContent() {
   const location = useLocation();
@@ -28,7 +27,6 @@ function AppContent() {
         <Route path="/" element={<Ladies />} />
         <Route path="/ladies/:sectionId" element={<LadiesSection />} />
         <Route path="/men" element={<Men />} />
-{/*         <Route path="/men/:sectionId" element={<MenSection />} /> */}
         <Route path="/kids" element={<Kids />} />
         <Route path="/home" element={<Home />} />
       </Routes>
