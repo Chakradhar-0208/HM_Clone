@@ -102,7 +102,7 @@ export default function LadiesSection() {
                 onClick={() => {
                   toggleWishlist(key);
                 }}
-                className="relative  -translate-y-8 left-[85%] sm:left-[90%] md:left-[85%] lg:left-[90%] w-5 h-5 fill-white"
+                className="relative cursor-pointer -translate-y-8 left-[85%] sm:left-[90%] md:left-[85%] lg:left-[90%] w-5 h-5 fill-white"
                 src={
                   wishlist[key]
                     ? "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABIUlEQVR4nO2UsUoDQRCGv1ewES1EAlrYWAYLrYKK2Ooj6CtpIKa08GlEczMb0UKiIggWEaNESGThhEPnNlmzAQt/GDjY2f/b/W8Z+FesHFQU6gIdhQ+BO4VGC5a+ejJYFjjJ13xPR+DY7w2aK2wrvCgMjeoLHCgc+m+rR6ArsBU6eZn5MDcY+BrR081g0Tp9PbRRI0rg6AcgzzwJQOHWArwnvMGbBbhJeIMrC9BMCGhYgLVE8QzaUDWfqsBZAsgpZbqGWYWHCcwfWzBHSBlsCPR+EU3PwXrQvBDVZuSz7QvsEiMH+2Uz57u5wl6UeSGu2oj59Opgh0nUhqrAk2H+PHbmY0BW/Hwp/NB7B6uklMC8wLlCdgkLTEMXMONrKuZ/Vp9SFOP6yc1bowAAAABJRU5ErkJggg=="
