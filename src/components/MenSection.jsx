@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 
-// Sample content map
 const menSections = {
   preppy_shores: {
     title: "Preppy Shores",
@@ -28,10 +27,8 @@ const menSections = {
 };
 
 export default function MenSection() {
-  const { sectionId } = useParams(); // Get the part after /men/
-
-  const section = menSections[sectionId]; // Look it up from the object
-
+  const { sectionId } = useParams(); 
+  const section = menSections[sectionId]; 
   if (!section) {
     return <div className="p-6 text-red-500">404: Section not found</div>;
   }
