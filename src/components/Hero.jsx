@@ -7,14 +7,14 @@ export default function Hero() {
   return (
     <div>
       <div className="cursor-pointer " onClick={() => setShowList(!showList)}>
-        <div className="select-none h-[81vh] w-full bg-[#f8f7f6] text-red-600 font-bold gap-5 pl-5 text-5xl text-left flex items-center lg:relative lg:top-[130px]">
+        <div className="select-none hlg:h-[81vh] h-[71vh] w-full bg-[#f8f7f6] text-red-600 font-bold gap-5 pl-5 text-5xl text-left flex items-center lg:relative lg:top-[130px]">
           UP TO 50% OFF <br /> <br /> NEW STYLES ADDED
         </div>
 
         {
           <>
             <div
-              className={`w-full h-[81vh] absolute lg:top-32 top-41 z-500 bg-[#000000c5] 
+              className={`w-full lg:h-[81vh] h-[71vh]  absolute lg:top-32 top-41 z-500 bg-[#000000c5] 
                 transition-opacity duration-700 ease-in-out 
                 ${showList ? "opacity-100" : "opacity-0 pointer-events-none"}`}
             ></div>
@@ -45,12 +45,15 @@ export default function Hero() {
                 onClick={() => setShowList(!showList)}
                 className="p-2 transition-all group relative w-8 h-8"
               >
+                {/* Plus Icon with Rotation */}
                 <FiPlus
                   className={` top-[5px]
       w-5 h-5 absolute transition-transform duration-300
       ${showList ? "rotate-90 opacity-0" : "rotate-0 opacity-100"}
     `}
                 />
+
+                {/* Minus Icon fades in after */}
                 <FiMinus
                   className={`top-[5px]
       w-5 h-5 absolute transition-all duration-300 
@@ -64,7 +67,7 @@ export default function Hero() {
       </div>
 
       {/* Footer Note */}
-      <div className="relative flex items-center h-10 pl-4 pb-4 text-gray-500 text-xs font-semibold">
+      <div className="relative flex items-center  pl-4 pb-4 text-gray-500 text-xs font-semibold ">
         <p>
           Offer valid on selected styles. Available online & in-stores. *T&C
           Apply
