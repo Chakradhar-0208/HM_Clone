@@ -5,6 +5,7 @@ import {
   Navigate,
   useLocation,
 } from "react-router-dom";
+import { useEffect } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Ladies from "./components/Ladies";
@@ -18,8 +19,8 @@ import MenSection from "./components/MenSection";
 function AppContent() {
   const location = useLocation();
   const path = location.pathname;
-
-  const showHero = ["/ladies", "/men", "/kids", "/home"].includes(path);
+  const a=useEffect((e)=>{alert("This Page is Still Under Development..")},[])
+  const showHero = ["/ladies", "/men","/home"].includes(path);
 
   return (
     <>
