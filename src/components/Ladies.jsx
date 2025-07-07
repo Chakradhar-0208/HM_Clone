@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 export default function Ladies() {
   return (
     <>
-      <div className="flex flex-col w-full md:flex-row"> 
-        <Link to="/ladies/resortEssentials">
+      <div className="flex flex-col w-full md:flex-row">
+        <Link to="/ladies/highSummer">
           <div>
             <img
               loading="lazy"
               className="lg:w-[50vw] "
-              src="https://image.hm.com/content/dam/global_campaigns/season_02/women/start-page-assets/wk26/WS32I-4x5-women-startpage-wk26.jpg?imwidth=4800"
+              src="https://image.hm.com/content/dam/global_campaigns/season_02/women/start-page-assets/week-27/WS32K-4x5-startpage-wk27-teaser-1.jpg?imwidth=4800"
               alt="  "
             />
             <div className="flex justify-between px-6 py-3">
@@ -17,18 +17,20 @@ export default function Ladies() {
             </div>
           </div>
         </Link>
-        <div>
-          <img
-            loading="lazy"
-            src="https://image.hm.com/content/dam/global_campaigns/season_02/women/start-page-assets/wk26/DS32H-4x5-women-startpage-wk26.jpg?imwidth=4800"
-            alt=" "
-            className="lg:w-[50vw]"
-          />
-          <div className="flex justify-between px-6 py-3">
-            <p>MARINE HEAT</p>
-            <p className="underline cursor-pointer">SHOP NOW</p>
+        <Link to="/ladies/modernCountrySide">
+          <div>
+            <img
+              loading="lazy"
+              src="https://image.hm.com/content/dam/global_campaigns/season_02/women/start-page-assets/week-27/DS32I-4x5-startpage-wk27-teaser-3.jpg?imwidth=4800"
+              alt=" "
+              className="lg:w-[50vw]"
+            />
+            <div className="flex justify-between px-6 py-3">
+              <p>MODERN COUNTRYSIDE</p>
+              <p className="underline cursor-pointer">SHOP NOW</p>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
 
       <div className="xl:w-[50vw] mx-auto mt-[5rem] lg:mb-[18rem] ">
