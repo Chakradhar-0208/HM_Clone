@@ -35,7 +35,7 @@ export default function Ladies() {
 
       <div className="xl:w-[50vw] mx-auto mt-[5rem] lg:mb-[18rem] ">
         <div className="flex w-full">
-          <div className="group">
+         <Link to="/ladies/tops"> <div className="group">
             <img
               loading="lazy"
               className="lg:w-[50vw] "
@@ -46,8 +46,8 @@ export default function Ladies() {
               <p className="group-hover:underline">TOPS</p>
               <p className=" cursor-pointer text-xs ">EXPLORE</p>
             </div>
-          </div>
-          <div className="group">
+          </div></Link>
+          <Link to="/ladies/dresses"><div className="group">
             <img
               loading="lazy"
               src="https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/wk26/Dresses-CE-wk26.jpg?imwidth=1536"
@@ -58,10 +58,10 @@ export default function Ladies() {
               <p className="group-hover:underline">DRESSES</p>
               <p className=" cursor-pointer text-xs none">EXPLORE</p>
             </div>
-          </div>
+          </div></Link>
         </div>
         <div className="flex w-full  mt-12 mb-5 ">
-          <div className="group">
+          <Link to="/ladies/trousers"><div className="group">
             <img
               loading="lazy"
               className="lg:w-[50vw] "
@@ -72,7 +72,8 @@ export default function Ladies() {
               <p className="group-hover:underline">TROUSERS</p>
               <p className=" cursor-pointer text-xs">EXPLORE</p>
             </div>
-          </div>
+          </div></Link>
+          <Link to="/ladies/shirts">
           <div className="group">
             <img
               loading="lazy"
@@ -85,6 +86,7 @@ export default function Ladies() {
               <p className=" cursor-pointer text-xs">EXPLORE</p>
             </div>
           </div>
+          </Link>
         </div>
         <div className="w-[99vw] lg:absolute left-0  px-5 py-2 ">
           <h1>Women's Clothing</h1>
