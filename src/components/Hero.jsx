@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { FiPlus, FiMinus } from "react-icons/fi";
-
+import { Link } from "react-router-dom";
 export default function Hero() {
   const [showList, setShowList] = useState(false);
 
   return (
     <div>
-      <div className="cursor-pointer " onClick={() => setShowList(!showList)}>
+      <div className="cursor-pointer overflow-x-hidden" onClick={() => setShowList(!showList)}>
         <div className="select-none hlg:h-[81vh] h-[61vh] w-full bg-[#f8f7f6] text-red-600 font-bold gap-5 pl-5 text-5xl text-left flex items-center lg:relative lg:top-[130px]">
           UP TO 50% OFF <br /> <br /> NEW STYLES ADDED
         </div>
@@ -29,23 +29,32 @@ export default function Hero() {
                   } 
                   flex flex-col items-end relative h-60 w-full sm:w-[360px] justify-evenly px-9 bg-white z-500 text-gray-600`}
               >
-                <p className="hover:text-black">LADIES</p>
-                <p className="hover:text-black">MEN</p>
-                <p className="hover:text-black">BABY</p>
-                <p className="hover:text-black">KIDS 2-8Y</p>
-                <p className="hover:text-black">KIDS 9-14Y</p>
-                <p className="hover:text-black">HOME</p>
+                <Link to="/ladies">
+                  <p className="hover:text-black">LADIES</p>
+                </Link>
+                <Link to="/men">
+                  <p className="hover:text-black">MEN</p>
+                </Link>
+                <Link to="/kids">
+                  <p className="hover:text-black">BABY</p>
+                </Link>
+                <Link to="/kids">
+                  <p className="hover:text-black">KIDS 2-8Y</p>
+                </Link>
+                <Link to="/kids">
+                  <p className="hover:text-black">KIDS 9-14Y</p>
+                </Link>
+                <Link to="/home">
+                  <p className="hover:text-black">HOME</p>
+                </Link>
               </div>
             </div>
-
-            {/* Button to hide list */}
             <div className="flex items-center flex-row relative justify-end h-15 z-50">
               <a>SHOP NOW </a>
               <button
                 onClick={() => setShowList(!showList)}
                 className="p-2 transition-all group relative w-8 h-8"
               >
-                {/* Plus Icon with Rotation */}
                 <FiPlus
                   className={` top-[5px]
       w-5 h-5 absolute transition-transform duration-300
@@ -53,7 +62,6 @@ export default function Hero() {
     `}
                 />
 
-                {/* Minus Icon fades in after */}
                 <FiMinus
                   className={`top-[5px]
       w-5 h-5 absolute transition-all duration-300 
@@ -66,7 +74,6 @@ export default function Hero() {
         }
       </div>
 
-      {/* Footer Note */}
       <div className="relative flex items-center  pl-4 pb-4 text-gray-500 text-xs font-semibold ">
         <p>
           Offer valid on selected styles. Available online & in-stores. *T&C
