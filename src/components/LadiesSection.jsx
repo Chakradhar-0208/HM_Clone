@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
+import { FiPlus, FiFilter } from "react-icons/fi";
 const ladiesSections = {
   highSummer: {
     title: "HIGH SUMMER",
@@ -111,7 +112,7 @@ const ladiesSections = {
         type: "sport",
       },
       jackWeave: {
-        title: "JACQUARD-WEAVVE STRAPPY DRESS",
+        title: "JACQUARD-WEAVE STRAPPY DRESS",
         price: "2,299.00",
         image:
           "https://image.hm.com/assets/hm/f7/e2/f7e243d21e190ba2e347a7380dd3c8dd6346d430.jpg?imwidth=1536",
@@ -135,26 +136,198 @@ const ladiesSections = {
       },
     },
   },
-  Tops: {
+  tops: {
     title: "TOPS",
     image:
       "https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/wk26/Tops-CE-wk26.jpg?imwidth=1536",
+    products: {
+      laceTrimmed: {
+        title: "LACE-TRIMMED POINTELLE T-SHIRT",
+        price: "799.00",
+        image:
+          "https://image.hm.com/assets/hm/d4/8d/d48d744234d0d62070e65d98ebfad9f8c773a1a2.jpg?imwidth=1536",
+        type: "clothes",
+      },
+      thongBody: {
+        title: "THONG BODY",
+        price: "699.00",
+        image:
+          "https://image.hm.com/assets/hm/7a/99/7a99414ce0afeca8d96f05be30fd9599e59cbb33.jpg?imwidth=1536",
+        type: "sport",
+      },
+      longWaistCoat: {
+        title: "LONG WAIST COAT",
+        price: "3,299.00",
+        image:
+          "https://image.hm.com/assets/hm/78/62/7862340c9ae2fad579b0d0732233014a133d40cd.jpg?imwidth=1536",
+        type: "sport",
+      },
+      ribbedTee: {
+        title: "RIBBED T-SHIRT",
+        price: "699.00",
+        image:
+          "https://image.hm.com/assets/hm/cb/ab/cbab0e8bdb43c8892724c65278b350d011703e63.jpg?imwidth=1536 ",
+        type: "clothes",
+      },
+      cottonTee: {
+        title: "COTTON T-SHIRT",
+        price: "699.00",
+        image:
+          "https://image.hm.com/assets/hm/7a/4a/7a4a2c6e4850b3d8f10834040af2f79ca0584b80.jpg?imwidth=1536",
+
+        //
+      },
+      frillPointelleKnit: {
+        title: "FRILL-TRIMMED POINTELLE-KNITTED",
+        price: "1,499.00",
+        image:
+          "https://image.hm.com/assets/hm/3d/99/3d9939a7961c79f6666a464adffde8c6418f3f28.jpg?imwidth=1536",
+      },
+    },
   },
   dresses: {
     title: "DRESSES",
     image:
       "https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/wk26/Dresses-CE-wk26.jpg?imwidth=1536",
+    products: {
+      flaredSkirt: {
+        title: "FLARED-SKIRT COTTON DRESS",
+        price: "1,499.00",
+        image:
+          "https://image.hm.com/assets/hm/e4/e3/e4e3a52016071db7561418f47646037827e44bc7.jpg?imwidth=1536",
+        type: "clothes",
+      },
+      smockedStrappy: {
+        title: "SMOCKED STRAPPY DRESS",
+        price: "1,499.00",
+        image:
+          "https://image.hm.com/assets/hm/76/62/76628efe80ad2d8f527fa133f31ce303651b2e2a.jpg?imwidth=1536",
+        type: "sport",
+      },
+      crinkledStrappy: {
+        title: "CRINKLED STRAPPY DRESS",
+        price: "2,299.00",
+        image:
+          "https://image.hm.com/assets/hm/47/f1/47f19404ce6a8b98c854aebe590b2260b7c56868.jpg?imwidth=1536",
+        type: "sport",
+      },
+      smockedStrappyBlue: {
+        title: "SMOCKED STRAPPY DRESS",
+        price: "1,499.00",
+        image:
+          "https://image.hm.com/assets/hm/a1/b2/a1b21f7f9d119a02db7ceba8fed9391fc89775a0.jpg?imwidth=1536",
+      },
+      tbeltDenim: {
+        title: "THE-DRESS DENIM DRESS",
+        price: "2,499.00",
+        colors: ["red", "blue", "white"],
+        image:
+          "https://image.hm.com/assets/hm/47/1b/471b07fbb0135cd0ab51f8f27fef7112d5e35ea4.jpg?imwidth=1536",
+        type: "clothes",
+      },
+      psleeved: {
+        title: "PUFF-SLEEVED COTTON DRESS",
+        price: "2,299.00",
+        image:
+          "https://image.hm.com/assets/hm/3c/c6/3cc6b29e55925fa0c8689444880998c2ab4993ef.jpg?imwidth=1536",
+      },
+    },
   },
   trousers: {
     title: "TROUSERS",
     image:
       "https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/wk26/Trousers-CE-wk26.jpg?imwidth=1536",
+    products: {
+      jerseyTrousers: {
+        title: "JERSEY TROUSERS",
+        price: "999.00",
+        image:
+          "https://image.hm.com/assets/hm/5d/af/5daf807c28337939061e2665f6847d883ff87317.jpg?imwidth=1536",
+      },
+      wideJoggers: {
+        title: "WIDE JOGGERS",
+        price: "999.00",
+        image:
+          "https://image.hm.com/assets/hm/38/af/38afe86b53c56e1ed84f26669a90c1591807a8a7.jpg?imwidth=1536",
+      },
+      wPullTrousers: {
+        title: "WIDE PULL-ON TROUSERS",
+        price: "999.00",
+        image:
+          " https://image.hm.com/assets/hm/c9/a0/c9a01867b9ba5a92aa19a7939afecf95fe1f2769.jpg?imwidth=1536",
+      },
+      linenBlendTrousers: {
+        title: "LINEN-BLEND TROUSERS",
+        price: "1,899.00",
+        image:
+          "https://image.hm.com/assets/hm/31/ec/31eccef9a0ffb386a0fc216a0f8325cae4855ee5.jpg?imwidth=1536",
+      },
+      seersucker: {
+        title: "SEERSUCKER DRAWSTRING TROUSERS",
+        price: "1,499.00",
+        image:
+          "https://image.hm.com/assets/hm/e0/a2/e0a229060dc1baf610dbbd21ad9c9c02865819d9.jpg?imwidth=1536",
+      },
+      tailoredCigar: {
+        title: "TAILORED CIGARETTE TROUSERS",
+        price: "1,999.00",
+        image:
+          "https://image.hm.com/assets/hm/33/aa/33aa12154f61ae204697d75d154355ce2082f4d8.jpg?imwidth=1536",
+      },
+    },
   },
   shirts: {
     title: "SHIRTS",
     image:
       "https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/wk26/Shirts-CE-wk26.jpg?imwidth=1536",
+    products: {
+      linenBlendBlouse: {
+        title: "LINEN-BLEND BLOUSE",
+        price: "1,499.00",
+        image:
+          "https://image.hm.com/assets/hm/b7/21/b7217ed87f4113e0da06a8eb0ade9e41e45de039.jpg?imwidth=1536",
+      },
+      crinkledViscose: {
+        title: "CRINCKLED VISCOSE SHIRT",
+        price: "1,499.00",
+        image:
+          "https://image.hm.com/assets/hm/54/0e/540e52be8f9bdd5cb223fc124f5792bd3b752b05.jpg?imwidth=1536 ",
+      },
+      cottonPoplin: {
+        title: "COTTON POPLIN SHIRT",
+        price: "1,499.00",
+        image:
+          "https://image.hm.com/assets/hm/e3/cf/e3cf1db310fa85c0c6374382687871c3fd305064.jpg?imwidth=1536",
+      },
+      linenBlendShirt: {
+        title: "LINEN-BLEND SHIRT",
+        price: "1,499.00",
+        image:
+          "https://image.hm.com/assets/hm/67/bb/67bb49e662e0ca73742e1496692860f900c9c4b2.jpg?imwidth=1536",
+      },
+      linenShirt: {
+        title: "LINEN SHIRT",
+        price: "2,199.00",
+        image:
+          "https://image.hm.com/assets/hm/99/b8/99b8838a0d5db82c40e27184ae06ae2dc6a1e956.jpg?imwidth=1536",
+      },
+      oxfordShirt: {
+        title: "OXFORD SHIRT",
+        price: "2,199",
+        image:
+          "https://image.hm.com/assets/hm/f1/ae/f1ae7180477826c50ca1f0c4673e28d3cd9a690b.jpg?imwidth=1536",
+      },
+    },
   },
+};
+
+const sectionTitles = {
+  highSummer: "NEW IN",
+  modernCountrySide: "NEW SEASON ROMANCE",
+  tops: "WOMEN'S TOPS & T-SHIRTS",
+  dresses: "DRESSES",
+  trousers: "WOMEN'S TROUSERS & LEGGINGS",
+  shirts: "WOMEN'S BLOUSES & SHIRTS",
 };
 
 export default function LadiesSection() {
@@ -172,21 +345,19 @@ export default function LadiesSection() {
       [key]: !prev[key],
     }));
   };
-  console.log(ladiesSections);
   return (
     <div className="lg:mt-[130px]">
       <div className="p-6">
-        <h1 className="font-bold ">NEW IN</h1>
-        <div className="my-5 flex gap-5 font-medium">
-          <p className="border px-2 py-1 text-sm bg-black text-white">
-            VIEW ALL
+        <h1 className="font-bold overflow-hidden text-4xl">
+          {sectionTitles[sectionId]?.toUpperCase()}
+        </h1>
+        <div className="flex justify-between mt-8">
+          <p className="flex justify-between items-center gap-2">
+            SORT BY <FiPlus className="w-5 h-5" />
           </p>
-          <p className="border px-2 py-1 text-sm">CLOTHES</p>
-          <p className="border px-2 py-1 text-sm">SPORT</p>
-        </div>
-        <div className="flex justify-between">
-          <p>SORT BY</p>
-          <p>FILTER</p>
+          <p className="flex justify-between items-center gap-2 ">
+            SORT BY <FiFilter className="w-4 h-5 " />
+          </p>
         </div>
       </div>
 
@@ -210,7 +381,7 @@ export default function LadiesSection() {
             </div>
             <div className="  py-2 -mt-5 lg:text-base text-sm pl-2">
               <p className="font-medium">{product.title}</p>
-              <strong>₹{product.price}</strong>
+              <strong>{`₹ ${product.price}`}</strong>
             </div>
           </div>
         ))}
