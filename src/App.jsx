@@ -19,7 +19,7 @@ import MenSection from "./components/MenSection";
 function AppContent() {
   const location = useLocation();
   const path = location.pathname;
-  const a=useEffect((e)=>{alert("This Page is Still Under Development..")},[])
+  const a=useEffect((e)=>{alert("This Page is Still Under Development..\nMore items will be added soon..")},[])
   const showHero = ["/ladies", "/men","/home"].includes(path);
 
   return (
