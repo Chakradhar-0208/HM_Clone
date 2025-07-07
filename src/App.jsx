@@ -2,6 +2,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate,
   useLocation,
 } from "react-router-dom";
 import Header from "./components/Header";
@@ -18,14 +19,15 @@ function AppContent() {
   const location = useLocation();
   const path = location.pathname;
 
-  const showHero = ["/", "/men", "/kids", "/home"].includes(path);
+  const showHero = ["/ladies", "/men", "/kids", "/home"].includes(path);
 
   return (
     <>
       <Header />
       {showHero && <Hero />}
       <Routes>
-        <Route path="/" element={<Ladies />} />
+        <Route path="/" element={<Navigate to="/ladies" replace />} />
+        <Route path="/ladies" element={<Ladies />} />
         <Route path="/ladies/:sectionId" element={<LadiesSection />} />
         <Route path="/men" element={<Men />} />
         <Route path="/men/:sectionId" element={<MenSection />} />
