@@ -7,14 +7,14 @@ export default function Hero() {
   return (
     <div>
       <div className="cursor-pointer " onClick={() => setShowList(!showList)}>
-        <div className="select-none hlg:h-[81vh] h-[71vh] w-full bg-[#f8f7f6] text-red-600 font-bold gap-5 pl-5 text-5xl text-left flex items-center lg:relative lg:top-[130px]">
+        <div className="select-none hlg:h-[81vh] h-[61vh] w-full bg-[#f8f7f6] text-red-600 font-bold gap-5 pl-5 text-5xl text-left flex items-center lg:relative lg:top-[130px]">
           UP TO 50% OFF <br /> <br /> NEW STYLES ADDED
         </div>
 
         {
           <>
             <div
-              className={`w-full lg:h-[81vh] h-[71vh]  absolute lg:top-32 top-41 z-500 bg-[#000000c5] 
+              className={`w-full lg:h-[81vh] h-[61vh]  absolute lg:top-32 top-41 z-500 bg-[#000000c5] 
                 transition-opacity duration-700 ease-in-out 
                 ${showList ? "opacity-100" : "opacity-0 pointer-events-none"}`}
             ></div>
