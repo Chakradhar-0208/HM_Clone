@@ -97,7 +97,7 @@ export default function Header() {
       <div className="h-[120px] lg:h-0"></div>
 
       <nav
-        className="flex justify-center items-center lg:justify-start lg:fixed lg:top-[4.7rem] lg:left-[8.75rem] font-black mb-3 lg:mb-0 sticky top-0 lg:z-30
+        className="flex justify-center items-center lg:justify-start lg:fixed lg:top-[4.7rem] lg:left-[8.75rem] font-black pb-3 lg:mb-0 sticky top-0 lg:z-30 border-b border-gray-200 md:border-0
         "
       >
         <ul className="flex gap-x-9 font-medium text-sm mt-3.5 lg:mt-0">
