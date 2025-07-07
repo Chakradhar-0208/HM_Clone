@@ -42,7 +42,7 @@ export default function Hero() {
             <div className="flex items-center flex-row relative justify-end h-15 z-501">
               <a>SHOP NOW </a>
               <button className="p-2">
-                <FiMinus className="w-5 h-5" />
+                {(showList)?<FiMinus className="w-5 h-5" />:<FiPlus className="w-5 h-5"/>}
               </button>
             </div>
           </>
