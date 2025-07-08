@@ -2,92 +2,98 @@ import { Link } from "react-router-dom";
 export default function Men() {
   return (
     <>
-      <div className="flex flex-col w-full lg:flex-row cursor-pointer">
-        <Link to="/men/preppy_shores">
-          <div>
+      <div className="flex w-full flex-col md:flex-row cursor-pointer ">
+        <Link to="/men/new_styles" className="md:w-1/2">
+          <div className="aspect-[4/5] w-full">
             <img
               loading="lazy"
-              className="lg:w-[50vw] "
-              src="https://image.hm.com/content/dam/global_campaigns/season_02/men/start-page-assets/w26/MS32LH4-4x5-men-startpage-wk26.jpg?imwidth=4800"
-              alt="  "
+              src="https://image.hm.com/content/dam/global_campaigns/season_02/men/start-page-assets/w27/MS32LH4-4x5-wk27.jpg?imwidth=4800"
+              alt="Men's New Styles - Week 27"
+              className="w-full h-full object-cover"
             />
-            <div className="flex justify-between px-6 py-3">
-              <p>PREPPY SHORES</p>
-              <p className="underline cursor-pointer">SHOP NOW</p>
-            </div>
+          </div>
+          <div className="flex justify-between px-6 py-3">
+            <p>NEW STYLES</p>
+            <p className="underline">SHOP NOW</p>
           </div>
         </Link>
-        <Link to="/men/rugged_luxe">
-          {" "}
-          <div>
+
+        <Link to="/men/linen_looks" className="md:w-1/2">
+          <div className="aspect-[4/5] w-full">
             <img
               loading="lazy"
-              src="https://image.hm.com/content/dam/global_campaigns/season_02/men/start-page-assets/w26/MS32LH3-4x5-men-startpage-wk26.jpg?imwidth=1870"
-              alt=" "
-              className="lg:w-[50vw]"
+              src="https://image.hm.com/content/dam/global_campaigns/season_02/men/start-page-assets/w27/MS32E1-2x3-wk27.jpg?imwidth=4800"
+              alt="Men's Linen Looks - Week 27"
+              className="w-full h-full object-cover"
             />
-            <div className="flex justify-between px-6 py-3">
-              <p>RUGGED LUXE</p>
-              <p className="underline cursor-pointer">SHOP NOW</p>
-            </div>
+          </div>
+          <div className="flex justify-between px-6 py-3">
+            <p>LINEN LOOKS</p>
+            <p className="underline">SHOP NOW</p>
           </div>
         </Link>
       </div>
 
       <div className="xl:w-[50vw] mx-auto mt-[5rem] lg:mb-[18rem] ">
         <div className="flex  w-full cursor-pointer">
+          <Link to="/men/t_shirts">
+            <div className="group">
+              <img
+                loading="lazy"
+                className="lg:w-[50vw] "
+                src="https://image.hm.com/content/dam/global_campaigns/season_02/men/start-page-assets/w27/T-shirt-Tanks-CE-wk-27-30.jpg?imwidth=1536"
+                alt="  "
+              />
+              <div className="flex flex-col px-1 py-3">
+                <p className="group-hover:underline">T-SHIRTS AND TANKS</p>
+                <p className=" cursor-pointer text-xs ">EXPLORE</p>
+              </div>
+            </div>
+          </Link>
+          <Link to="/men/trousers">
+            <div className="group">
+              <img
+                loading="lazy"
+                src="https://image.hm.com/content/dam/global_campaigns/season_02/men/start-page-assets/w27/Trousers-CE-wk-27-30.jpg?imwidth=1536"
+                alt=" "
+                className="lg:w-[50vw]"
+              />
+              <div className="flex flex-col px-1 py-3 ">
+                <p className="group-hover:underline">TROUSERS</p>
+                <p className=" cursor-pointer text-xs none">EXPLORE</p>
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div className="flex  w-full  mt-12 mb-5 cursor-pointer">
           <Link to="/men/shirts">
             <div className="group">
               <img
                 loading="lazy"
                 className="lg:w-[50vw] "
-                src="https://image.hm.com/content/dam/global_campaigns/season_02/men/start-page-assets/w24/ce/Shirts-CE-wk24.jpg?imwidth=1536"
+                src="https://image.hm.com/content/dam/global_campaigns/season_02/men/start-page-assets/w27/Shirts-CE-wk-27-30.jpg?imwidth=1536"
                 alt="  "
               />
               <div className="flex flex-col px-1 py-3">
-                <p className="group-hover:underline">SHIRTS</p>
-                <p className=" cursor-pointer text-xs ">EXPLORE</p>
+                <p className="group-hover:underline">SHIRTS </p>
+                <p className=" cursor-pointer text-xs">EXPLORE</p>
               </div>
             </div>
           </Link>
-          <div className="group">
-            <img
-              loading="lazy"
-              src="https://image.hm.com/content/dam/global_campaigns/season_01/men/start-page-assets/w21/category-entries/Trousers-CE-wk21-24-2x3.jpg?imwidth=1536"
-              alt=" "
-              className="lg:w-[50vw]"
-            />
-            <div className="flex flex-col px-1 py-3 ">
-              <p className="group-hover:underline">SEASON'S TROUSERS</p>
-              <p className=" cursor-pointer text-xs none">EXPLORE</p>
+          <Link to="/men/jeans">
+            <div className="group">
+              <img
+                loading="lazy"
+                src="https://image.hm.com/content/dam/global_campaigns/season_02/men/start-page-assets/w27/Jeans-CE-wk-27-30.jpg?imwidth=1536"
+                alt=" "
+                className="lg:w-[50vw]"
+              />
+              <div className="flex flex-col px-1 py-3">
+                <p className="group-hover:underline">JEANS</p>
+                <p className=" cursor-pointer text-xs">EXPLORE</p>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="flex  w-full  mt-12 mb-5 cursor-pointer">
-          <div className="group">
-            <img
-              loading="lazy"
-              className="lg:w-[50vw] "
-              src="https://image.hm.com/content/dam/global_campaigns/season_02/men/start-page-assets/w24/ce/T-shirt-Tanks-CE-wk24.jpg?imwidth=1536"
-              alt="  "
-            />
-            <div className="flex flex-col px-1 py-3">
-              <p className="group-hover:underline">T-SHIRTS AND TANKS</p>
-              <p className=" cursor-pointer text-xs">EXPLORE</p>
-            </div>
-          </div>
-          <div className="group">
-            <img
-              loading="lazy"
-              src="https://image.hm.com/content/dam/global_campaigns/season_02/men/start-page-assets/w24/ce/Linen-CE-wk24.jpg?imwidth=1536"
-              alt=" "
-              className="lg:w-[50vw]"
-            />
-            <div className="flex flex-col px-1 py-3">
-              <p className="group-hover:underline">LINEN LOOKS</p>
-              <p className=" cursor-pointer text-xs">EXPLORE</p>
-            </div>
-          </div>
+          </Link>
         </div>
         <div className="w-[99vw] lg:absolute left-0  px-5 py-2 ">
           <h1>MEN'S CLOTHING</h1>
@@ -110,4 +116,4 @@ export default function Men() {
       </div>
     </>
   );
-} 
+}
