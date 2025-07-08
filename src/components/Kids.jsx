@@ -1,30 +1,7 @@
 export default function Kids() {
   return (
     <>
-      {/* <div className="w-full min-h-[50vh] h-[83.5vh] overflow-hidden md:h-[50vh] lg:h-screen">
-        <img
-          src="https://image.hm.com/content/dam/global_campaigns/season_02/kids/start-page-assets/w27/KS32L-2x3-NS-kids-start-page-prio-week-27.jpg"
-          alt=""
-          loading="lazy"
-          className="w-full min-h-[50vh] object-cover h-[83.5vh] md:h-[50vh] lg:h-screen"
-        />
-
-        <div className="flex flex-col items-center justify-end pb-8 relative -mt-32 md:mt-6 lg:-mt-32 -top-51.5  h-[48%] lg:h-[50%] lg:-top-80">
-          <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.34)_11%,rgba(125,125,125,0.25)_75%,rgba(255,255,255,0)_100%)] z-5"></div>
-
-
-          <div className="z-10 flex flex-col items-center lg:flex-row lg:justify-between lg:w-[95%] lg:pb-8">
-            <p className="text-4xl md:text-5xl font-extrabold overflow-hidden text-white tracking-wide text-center">
-              NEW ARRIVALS
-            </p>
-            <p className="underline cursor-pointer bg-white w-fit px-2 my-4 text-sm md:text-base py-1 text-black">
-              SHOP NOW
-            </p>
-          </div>
-        </div>
-      </div> */}
-
-      <div className="relative min-h-[50dvh] h-[83.5dvh] overflow-hidden md:h-[60dvh] lg:h-screen">
+      <div className="relative  h-[83.5vh] overflow-hidden md:h-[60dvh] lg:h-screen">
         <img
           src="https://image.hm.com/content/dam/global_campaigns/season_02/kids/start-page-assets/w27/KS32L-2x3-NS-kids-start-page-prio-week-27.jpg"
           alt=""
