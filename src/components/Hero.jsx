@@ -39,13 +39,7 @@ export default function Hero() {
                   <p className="hover:text-black">MEN</p>
                 </Link>
                 <Link to="/kids">
-                  <p className="hover:text-black">BABY</p>
-                </Link>
-                <Link to="/kids">
-                  <p className="hover:text-black">KIDS 2-8Y</p>
-                </Link>
-                <Link to="/kids">
-                  <p className="hover:text-black">KIDS 9-14Y</p>
+                  <p className="hover:text-black">KIDS</p>
                 </Link>
                 <Link to="/home">
                   <p className="hover:text-black">HOME</p>
