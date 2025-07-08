@@ -23,7 +23,7 @@ export default function Home() {
               className="w-full h-[75%] object-cover"
             />
 
-            <div className="absolute h-fit top-[50%] lg:top-[60%] sm:top-[60%] md:top-[70%] left-6 right-6 z-10">
+            <div className="absolute top-[50%] lg:top-[60%] sm:top-[60%] md:top-[70%] left-6 right-6 z-10">
               <p className="text-3xl font-extrabold text-white tracking-wide">
                 VACATION READY
               </p>
