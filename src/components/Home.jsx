@@ -1,46 +1,65 @@
+import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col w-full lg:flex-row">
-        <div>
+      <div className="relative  h-[83.5vh] overflow-hidden md:h-[60dvh] lg:h-screen">
+        <img
+          src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-27/7002E-V27-16x9.jpg?imwidth=4800"
+          alt=""
+          loading="lazy"
+          className=" hidden md:block absolute inset-0 w-full h-full object-cover object-top "
+        />
+        <img
+          src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-27/7002E-V27-9x16.jpg?imwidth=4800"
+          alt=""
+          loading="lazy"
+          className=" md:hidden block absolute inset-0 w-full h-full object-cover object-top "
+        />
+
+        <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.3)_10%,rgba(125,125,125,0.10)_75%,rgba(255,255,255,0)_100%)] z-10"></div>
+
+        <div className="absolute inset-0 flex flex-col lg:flex-row lg:justify-between lg:px-6 items-center justify-end pb-10 z-20 text-center lg:items-end ">
+          <p className="text-white text-4xl md:text-5xl font-extrabold tracking-wide overflow-hidden ">
+            NATURAL NOTES
+          </p>
+          <p className="underline cursor-pointer bg-white text-black w-fit px-1 py-1 mt-4 text-sm md:text-base">
+            SHOP NOW
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-col w-full md:flex-row ">
+        {/* lg:mt-32 */}
+        <Link to="/home/summerBedding"><div>
           <img
             loading="lazy"
             className="lg:w-[50vw] "
-            src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-26/7002D-V26-4x5.jpg?imwidth=4800"
+            src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-27/7002E-V27-4x5.jpg?imwidth=4800"
             alt="  "
           />
           <div className="flex justify-between px-6 py-3">
-            <p>NEW IN:TABLEWARE</p>
+            <p>SUMMER BEDDING</p>
             <p className="underline cursor-pointer">SHOP NOW</p>
           </div>
-        </div>
-        <div>
-          <div className="relative lg:w-[50vw] h-full">
-            <img
-              loading="lazy"
-              src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-26/7002B-V26-16x9.jpg?imwidth=4800"
-              alt=" "
-              className="w-full h-[75%] object-cover"
-            />
-
-            <div className="absolute top-[50%] lg:top-[60%] sm:top-[60%] md:top-[70%] left-6 right-6 z-10">
-              <p className="text-3xl font-extrabold text-white tracking-wide">
-                VACATION READY
-              </p>
-              <p className="underline cursor-pointer bg-white inline-block px-2 mt-4 text-sm md:text-base text-black float-right">
-                SHOP NOW
-              </p>
-            </div>
+        </div></Link>
+        <Link to="/home/cushionCovers"> <div>
+          <img
+            loading="lazy"
+            src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-27/7002A-V27-4x5.jpg?imwidth=4800"
+            alt=" "
+            className="lg:w-[50vw]"
+          />
+          <div className="flex justify-between px-6 py-3">
+            <p>CUSHION COVERS</p>
+            <p className="underline cursor-pointer">SHOP 9-14Y</p>
           </div>
-        </div>
+        </div></Link>
       </div>
-
       <div className="xl:w-[50vw] mx-auto mt-[5rem] xl:mb-[18rem] ">
-        <div className="flex flex-col w-full lg:flex-row ">
+        <div className="flex  w-full ">
           <div className="group">
             <img
               loading="lazy"
-              className="lg:w-[50vw] "
+              className="w-[50vw] "
               src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-23/category-entries/Bedding_CE_wk23-28-2x3_1.jpg?imwidth=1536"
               alt="  "
             />
@@ -54,7 +73,7 @@ export default function Home() {
               loading="lazy"
               src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-23/category-entries/Tableware_CE_wk23-28-2x3_3.jpg?imwidth=1536"
               alt=" "
-              className="lg:w-[50vw]"
+              className="w-[50vw]"
             />
             <div className="flex flex-col px-1 py-3 ">
               <p className="group-hover:underline">TABLEWARE</p>
@@ -62,11 +81,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col w-full lg:flex-row  mt-12 mb-5 ">
-          <div className="group">
+        <div className="flex w-full  mt-12 mb-5 ">
+          <Link to="/home/towels"><div className="group">
             <img
               loading="lazy"
-              className="lg:w-[50vw] "
+              className="w-[50vw] "
               src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-23/category-entries/Towels_CE_wk23-28-2x3_5.jpg?imwidth=1536"
               alt="  "
             />
@@ -74,19 +93,21 @@ export default function Home() {
               <p className="group-hover:underline">TOWELS</p>
               <p className=" cursor-pointer text-xs">EXPLORE</p>
             </div>
-          </div>
-          <div className="group">
-            <img
-              loading="lazy"
-              src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-23/category-entries/Decorations_CE_wk23-28-2x3_4.jpg?imwidth=1536"
-              alt=" "
-              className="lg:w-[50vw]"
-            />
-            <div className="flex flex-col px-1 py-3">
-              <p className="group-hover:underline">DECORATIONS</p>
-              <p className=" cursor-pointer text-xs">EXPLORE</p>
+          </div></Link>
+          <Link to="/home/homeDecorations">
+            <div className="group">
+              <img
+                loading="lazy"
+                src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-23/category-entries/Decorations_CE_wk23-28-2x3_4.jpg?imwidth=1536"
+                alt=" "
+                className="w-[50vw]"
+              />
+              <div className="flex flex-col px-1 py-3">
+                <p className="group-hover:underline">DECORATIONS</p>
+                <p className=" cursor-pointer text-xs">EXPLORE</p>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
         <div className="w-[99vw] xl:absolute left-0  px-5 py-2 ">
           <h1>HOME DECOR</h1>
