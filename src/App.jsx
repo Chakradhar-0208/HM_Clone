@@ -15,12 +15,12 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import LadiesSection from "./components/LadiesSection";
 import MenSection from "./components/MenSection";
-
+import ScrollToTop from "./components/ScrollToTop";
 function AppContent() {
   const location = useLocation();
   const path = location.pathname;
-  const a=useEffect((e)=>{alert("This Page is Still Under Development..\nMore items will be added soon..")},[])
-  const showHero = ["/ladies", "/men","/home"].includes(path);
+  const a = useEffect((e) => { alert("This Page is a Clone,  Still Under Development..\nMore items will be added soon..") }, [])
+  const showHero = ["/ladies", "/men", "/home"].includes(path);
 
   return (
     <>
@@ -40,10 +40,10 @@ function AppContent() {
   );
 }
 
-// Wrap AppContent in Router
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <AppContent />
     </Router>
   );
