@@ -15,12 +15,14 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import LadiesSection from "./components/LadiesSection";
 import MenSection from "./components/MenSection";
+import HomeSection from "./components/HomeSection";
 import ScrollToTop from "./components/ScrollToTop";
+
 function AppContent() {
   const location = useLocation();
   const path = location.pathname;
   const a = useEffect((e) => { alert("This Page is a Clone,  Still Under Development..\nMore items will be added soon..") }, [])
-  const showHero = ["/ladies", "/men", "/home"].includes(path);
+  const showHero = ["/ladies", "/men"].includes(path);
 
   return (
     <>
@@ -34,6 +36,7 @@ function AppContent() {
         <Route path="/men/:sectionId" element={<MenSection />} />
         <Route path="/kids" element={<Kids />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/home/:sectionId" element={<HomeSection />} />
       </Routes>
       <Footer />
     </>
