@@ -29,71 +29,83 @@ export default function Home() {
       </div>
       <div className="flex flex-col w-full md:flex-row ">
         {/* lg:mt-32 */}
-        <Link to="/home/summerBedding"><div>
-          <img
-            loading="lazy"
-            className="lg:w-[50vw] "
-            src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-27/7002E-V27-4x5.jpg?imwidth=4800"
-            alt="  "
-          />
-          <div className="flex justify-between px-6 py-3">
-            <p>SUMMER BEDDING</p>
-            <p className="underline cursor-pointer">SHOP NOW</p>
+        <Link to="/home/summerBedding">
+          <div>
+            <img
+              loading="lazy"
+              className="lg:w-[50vw] "
+              src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-27/7002E-V27-4x5.jpg?imwidth=4800"
+              alt="  "
+            />
+            <div className="flex justify-between px-6 py-3">
+              <p>SUMMER BEDDING</p>
+              <p className="underline cursor-pointer">SHOP NOW</p>
+            </div>
           </div>
-        </div></Link>
-        <Link to="/home/cushionCovers"> <div>
-          <img
-            loading="lazy"
-            src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-27/7002A-V27-4x5.jpg?imwidth=4800"
-            alt=" "
-            className="lg:w-[50vw]"
-          />
-          <div className="flex justify-between px-6 py-3">
-            <p>CUSHION COVERS</p>
-            <p className="underline cursor-pointer">SHOP 9-14Y</p>
+        </Link>
+        <Link to="/home/cushionCovers">
+          {" "}
+          <div>
+            <img
+              loading="lazy"
+              src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-27/7002A-V27-4x5.jpg?imwidth=4800"
+              alt=" "
+              className="lg:w-[50vw]"
+            />
+            <div className="flex justify-between px-6 py-3">
+              <p>CUSHION COVERS</p>
+              <p className="underline cursor-pointer">SHOP NOW</p>
+            </div>
           </div>
-        </div></Link>
+        </Link>
       </div>
       <div className="xl:w-[50vw] mx-auto mt-[5rem] xl:mb-[18rem] ">
         <div className="flex  w-full ">
-          <div className="group">
-            <img
-              loading="lazy"
-              className="w-[50vw] "
-              src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-23/category-entries/Bedding_CE_wk23-28-2x3_1.jpg?imwidth=1536"
-              alt="  "
-            />
-            <div className="flex flex-col px-1 py-3">
-              <p className="group-hover:underline">BEDDING</p>
-              <p className=" cursor-pointer text-xs ">EXPLORE</p>
+          <Link to="/home/bedding">
+            <div className="group">
+              <img
+                loading="lazy"
+                className="w-[50vw] "
+                src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-23/category-entries/Bedding_CE_wk23-28-2x3_1.jpg?imwidth=1536"
+                alt="  "
+              />
+              <div className="flex flex-col px-1 py-3">
+                <p className="group-hover:underline">BEDDING</p>
+                <p className=" cursor-pointer text-xs ">EXPLORE</p>
+              </div>
             </div>
-          </div>
-          <div className="group">
-            <img
-              loading="lazy"
-              src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-23/category-entries/Tableware_CE_wk23-28-2x3_3.jpg?imwidth=1536"
-              alt=" "
-              className="w-[50vw]"
-            />
-            <div className="flex flex-col px-1 py-3 ">
-              <p className="group-hover:underline">TABLEWARE</p>
-              <p className=" cursor-pointer text-xs none">EXPLORE</p>
+          </Link>
+          <Link to="/home/tableware">
+            {" "}
+            <div className="group">
+              <img
+                loading="lazy"
+                src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-23/category-entries/Tableware_CE_wk23-28-2x3_3.jpg?imwidth=1536"
+                alt=" "
+                className="w-[50vw]"
+              />
+              <div className="flex flex-col px-1 py-3 ">
+                <p className="group-hover:underline">TABLEWARE</p>
+                <p className=" cursor-pointer text-xs none">EXPLORE</p>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
         <div className="flex w-full  mt-12 mb-5 ">
-          <Link to="/home/towels"><div className="group">
-            <img
-              loading="lazy"
-              className="w-[50vw] "
-              src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-23/category-entries/Towels_CE_wk23-28-2x3_5.jpg?imwidth=1536"
-              alt="  "
-            />
-            <div className="flex flex-col px-1 py-3">
-              <p className="group-hover:underline">TOWELS</p>
-              <p className=" cursor-pointer text-xs">EXPLORE</p>
+          <Link to="/home/towels">
+            <div className="group">
+              <img
+                loading="lazy"
+                className="w-[50vw] "
+                src="https://image.hm.com/content/dam/global_campaigns/season_02/home/start-page-assets-/v-23/category-entries/Towels_CE_wk23-28-2x3_5.jpg?imwidth=1536"
+                alt="  "
+              />
+              <div className="flex flex-col px-1 py-3">
+                <p className="group-hover:underline">TOWELS</p>
+                <p className=" cursor-pointer text-xs">EXPLORE</p>
+              </div>
             </div>
-          </div></Link>
+          </Link>
           <Link to="/home/homeDecorations">
             <div className="group">
               <img
