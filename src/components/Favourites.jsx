@@ -2,7 +2,7 @@ import { useWishlist } from "./WishlistContext";
 import Toast from "./Toast";
 import { useState } from "react";
 
-export default function WishList() {
+export default function Favourites() {
   const { wishlist, toggleWishlist, toastMessage, clearToast } = useWishlist();
   const [removing, setRemoving] = useState(null);
 
@@ -18,15 +18,17 @@ export default function WishList() {
 
   if (items.length === 0) {
     return (
-      <div className="p-6 text-center text-gray-500">
-        Your wishlist is empty.
+      <div className="p-6  text-center text-gray-500">
+        {/* Favourites is empty. */}
+
+        FAVOURITES IS EMPTY.
       </div>
     );
   }
 
   return (
-    <div className="py-6">
-      <h2 className="text-3xl font-bold mb-4">Your Wishlist</h2>
+    <div className="lg:mt-[140px] mt-[15px] min-h-[80dvh]">
+      <h2 className="text-3xl font-bold mb-4 px-6 ">FAVOURITES</h2>
       <div className="flex flex-wrap">
         {items.map(([key, item]) => (
           <div
