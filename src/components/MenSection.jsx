@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
-import { useState } from "react";
 import { FiPlus, FiFilter } from "react-icons/fi";
-const ladiesSections = {
+import { useWishlist } from "./WishlistContext";
+const mensSections = {
   new_styles: {
     title: "NEW STYLES",
     image:
@@ -32,7 +32,6 @@ const ladiesSections = {
         image:
           "https://image.hm.com/assets/hm/c4/bf/c4bfb12a2e4c16d18000414147124497d6afb500.jpg?imwidth=1536",
       },
-      // SPORTS
 
       oversizedFit_CroppedTee: {
         title: "OVERSIZED FIT CROPPED T-SHIRT",
@@ -84,8 +83,6 @@ const ladiesSections = {
         image:
           "	https://image.hm.com/assets/hm/d7/b9/d7b939dcd7f4e0b9fca6ef65a4f01d689efa75e1.jpg?imwidth=1536",
       },
-
-      // SPORTS
 
       regFit_Trousers: {
         title: "REGULAR FIT LINEN-BLEND TROUSERS",
@@ -306,19 +303,13 @@ const sectionTitles = {
 
 export default function MenSection() {
   const { sectionId } = useParams();
-  const section = ladiesSections[sectionId];
+  const section = mensSections[sectionId];
   if (!section) {
     return <div className="p-6 text-red-600">404: Section not Found</div>;
   }
-  const product = section.products || {};
-  const [wishlist, setWishlist] = useState({});
 
-  const toggleWishlist = (key) => {
-    setWishlist((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
-  };
+  const product = section.products || {};
+  const { wishlist, toggleWishlist } = useWishlist();
   return (
     <div className="lg:mt-[130px]">
       <div className="p-6">
@@ -329,33 +320,31 @@ export default function MenSection() {
           <p className="flex justify-between items-center gap-2">
             SORT BY <FiPlus className="w-5 h-5" />
           </p>
-          <p className="flex justify-between items-center gap-2 ">
-            SORT BY <FiFilter className="w-4 h-5 " />
+          <p className="flex justify-between items-center gap-2">
+            FILTER <FiFilter className="w-4 h-5" />
           </p>
         </div>
       </div>
 
       <div className="flex flex-wrap">
-        {Object.entries(product).map(([key, product]) => (
+        {Object.entries(product).map(([key, prod]) => (
           <div key={key} className="w-[50%] md:w-[25%]">
             <div>
-              <img src={product.image} alt={product.title} className="w-full" />
+              <img src={prod.image} alt={prod.title} className="w-full" />
               <img
-                onClick={() => {
-                  toggleWishlist(key);
-                }}
-                className="relative  -translate-y-8 left-[85%] sm:left-[90%] md:left-[85%] lg:left-[90%] w-5 h-5 fill-white cursor-pointer"
+                onClick={() => toggleWishlist(key, prod)}
+                className="relative -translate-y-8 left-[85%] sm:left-[90%] md:left-[85%] lg:left-[90%] w-5 h-5 fill-white cursor-pointer"
                 src={
                   wishlist[key]
                     ? "https://res.cloudinary.com/dppnjyn8a/image/upload/v1751882673/rro2nzzvvy3lbzkbtbmk.png"
                     : "https://res.cloudinary.com/dppnjyn8a/image/upload/v1751882702/emr1pnwelzy5uzbrx1d7.png"
                 }
-                alt="like--v1"
-              ></img>
+                alt="like"
+              />
             </div>
-            <div className="  py-2 -mt-5 lg:text-base text-sm pl-2">
-              <p className="font-medium">{product.title}</p>
-              <strong>{`₹ ${product.price}`}</strong>
+            <div className="py-2 -mt-5 lg:text-base text-sm pl-2">
+              <p className="font-medium">{prod.title}</p>
+              <strong>{`₹ ${prod.price}`}</strong>
             </div>
           </div>
         ))}
