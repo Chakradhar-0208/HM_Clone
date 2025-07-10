@@ -18,7 +18,7 @@ import MenSection from "./components/MenSection";
 import HomeSection from "./components/HomeSection";
 import KidsSection from "./components/KidsSection";
 import ScrollToTop from "./components/ScrollToTop";
-import WishList from "./components/Wishlist";
+import Favourites from "./components/Favourites";
 import { WishlistProvider } from "./components/WishlistContext";
 
 function AppContent() {
@@ -36,7 +36,7 @@ function AppContent() {
       <Header />
       {showHero && <Hero />}
       <Routes>
-        <Route path="/wishlist" element={<WishList />} />
+        <Route path="/favourites" element={<Favourites />} />
         <Route path="/" element={<Navigate to="/ladies" replace />} />
         <Route path="/ladies" element={<Ladies />} />
         <Route path="/ladies/:sectionId" element={<LadiesSection />} />
