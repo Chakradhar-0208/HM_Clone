@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { FiPlus, FiFilter } from "react-icons/fi";
 import { useWishlist } from "./WishlistContext";
+import Toast from "./Toast";
 const mensSections = {
   new_styles: {
     title: "NEW STYLES",
@@ -309,7 +310,7 @@ export default function MenSection() {
   }
 
   const product = section.products || {};
-  const { wishlist, toggleWishlist } = useWishlist();
+  const { wishlist, toggleWishlist, toastMessage, clearToast  } = useWishlist();
   return (
     <div className="lg:mt-[130px]">
       <div className="p-6">
@@ -349,6 +350,7 @@ export default function MenSection() {
           </div>
         ))}
       </div>
+       {toastMessage && <Toast message={toastMessage} onClose={clearToast} />}
     </div>
   );
 }
