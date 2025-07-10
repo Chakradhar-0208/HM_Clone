@@ -10,6 +10,7 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import ScrollToTop from "../components/ScrollToTop";
 export default function Footer() {
   const [shopToggle, setShopToggle] = useState(false);
   const [corpToggle, setCorpToggle] = useState(false);
@@ -76,7 +77,8 @@ export default function Footer() {
             className="flex justify-between "
             onClick={() => {
               setShopToggle(!shopToggle);
-              console.log(shopToggle);
+              setCorpToggle(false);
+              setHelpToggle(false);
             }}
           >
             <p>SHOP</p>
@@ -111,7 +113,8 @@ export default function Footer() {
             className="flex justify-between "
             onClick={() => {
               setCorpToggle(!corpToggle);
-              console.log(corpToggle);
+              setHelpToggle(false);
+              setShopToggle(false);
             }}
           >
             <p>CORPORATE INFO</p>
@@ -140,7 +143,8 @@ export default function Footer() {
             className="flex justify-between "
             onClick={() => {
               setHelpToggle(!helpToggle);
-              console.log(helpToggle);
+              setCorpToggle(false);
+              setShopToggle(false);
             }}
           >
             <p>HELP</p>
@@ -169,15 +173,23 @@ export default function Footer() {
       </div>
 
       <div className="flex flex-col gap-6">
-        <img
-          src="https://static.vecteezy.com/system/resources/previews/023/871/762/non_2x/hm-brand-logo-symbol-black-design-hennes-and-mauritz-clothes-fashion-illustration-free-vector.jpg"
-          className="w-20"
-          alt=""
-        />
+        <Link to="/ladies">
+          <ScrollToTop />
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/023/871/762/non_2x/hm-brand-logo-symbol-black-design-hennes-and-mauritz-clothes-fashion-illustration-free-vector.jpg"
+            className="w-20"
+            alt=""
+          />
+        </Link>
 
         <div>
           <strong>INDIA (Rs.)</strong>
-          <span className="underline ml-8 cursor-pointer">CHANGE REGION</span>
+          <select name="" id="" className="underline ml-8 cursor-pointer">
+            <option value="" defaultValue={"CHANGE REGION"}>
+              CHANGE REGION
+            </option>
+            <option value="">INDIA</option>
+          </select>
         </div>
       </div>
 
@@ -195,6 +207,11 @@ export default function Footer() {
           <FaFacebook className="w-5 h-5" />
         </div>
       </div>
+      <Link to="https://github.com/Chakradhar-0208/">
+        <div className="flex justify-center mt-4 underline underline-offset-2 ">
+          A Clone by Chakradhar K{" "}
+        </div>
+      </Link>
     </footer>
   );
 }
