@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Kids() {
   return (
     <>
@@ -23,46 +24,39 @@ export default function Kids() {
 
       <div className="flex flex-col w-full md:flex-row ">
         {/* lg:mt-32 */}
-        <div>
-          <img
-            loading="lazy"
-            className="lg:w-[50vw] "
-            src="https://image.hm.com/content/dam/global_campaigns/season_02/kids/start-page-assets/w26/KS31I-4x5-kids-start-page-prio-week-26.jpg?imwidth=4800"
-            alt="  "
-          />
-          <div className="flex justify-between px-6 py-3">
-            <p>THE CHARACTER SHOP</p>
-            <p className="underline cursor-pointer">SHOP 2-8Y</p>
+        <Link to="new_styles">
+          <div>
+            <img
+              loading="lazy"
+              className="lg:w-[50vw] "
+              src="https://image.hm.com/content/dam/global_campaigns/season_02/kids/start-page-assets/w26/KS31I-4x5-kids-start-page-prio-week-26.jpg?imwidth=4800"
+              alt="  "
+            />
+            <div className="flex justify-between px-6 py-3">
+              <p>THE CHARACTER SHOP</p>
+              <p className="underline cursor-pointer">SHOP 2-8Y</p>
+            </div>
           </div>
-        </div>
-        <div>
-          <img
-            loading="lazy"
-            src="https://image.hm.com/content/dam/global_campaigns/season_02/kids/start-page-assets/w26/KS32J-4x5-kids-start-page-prio-week-26.jpg?imwidth=4800"
-            alt=" "
-            className="lg:w-[50vw]"
-          />
-          <div className="flex justify-between px-6 py-3">
-            <p>THE CHARACTER SHOP</p>
-            <p className="underline cursor-pointer">SHOP 9-14Y</p>
+        </Link>
+        <Link to="linen_looks">
+          {" "}
+          <div>
+            <img
+              loading="lazy"
+              src="https://image.hm.com/content/dam/global_campaigns/season_02/kids/start-page-assets/w26/KS32J-4x5-kids-start-page-prio-week-26.jpg?imwidth=4800"
+              alt=" "
+              className="lg:w-[50vw]"
+            />
+            <div className="flex justify-between px-6 py-3">
+              <p>THE CHARACTER SHOP</p>
+              <p className="underline cursor-pointer">SHOP 9-14Y</p>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
 
       <div className="xl:w-[50vw] mx-auto mt-[5rem] lg:mb-[18rem] ">
         <div className="flex  w-full ">
-          <div className="group">
-            <img
-              loading="lazy"
-              className="lg:w-[50vw] "
-              src="https://image.hm.com/content/dam/global_campaigns/season_01/kids/start-page-assets/w-20/Baby-CE-wk20-26-v2.jpg?imwidth=1536"
-              alt="  "
-            />
-            <div className="flex flex-col px-1 py-3">
-              <p className="group-hover:underline">BABY</p>
-              <p className=" cursor-pointer text-xs">SHOP NOW</p>
-            </div>
-          </div>
           <div className="group">
             <img
               loading="lazy"
