@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useWishlist } from "./WishlistContext";
 import { FiPlus, FiFilter } from "react-icons/fi";
+import Toast from "./Toast";
 const homeSections = {
   summerBedding: {
     title: "SUMMER BEDDING",
@@ -305,7 +306,7 @@ export default function HomeSection() {
     return <div className="p-6 text-red-600">404: Section not Found</div>;
   }
   const product = section.products || {};
-  const { wishlist, toggleWishlist } = useWishlist();
+  const {wishlist, toggleWishlist, toastMessage, clearToast } = useWishlist();
 
   return (
     <div className="lg:mt-[130px]">
@@ -352,6 +353,7 @@ export default function HomeSection() {
           </div>
         ))}
       </div>
+       {toastMessage && <Toast message={toastMessage} onClose={clearToast} />}
     </div>
   );
 }
