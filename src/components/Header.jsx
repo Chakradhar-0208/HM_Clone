@@ -13,7 +13,7 @@ export default function Header() {
   const wishlistCount = Object.keys(wishlist).length;
 
   return (
-    <div className="relative z-502">
+    <div className="relative z-505">
       <header className="py-1 pb-4 pl-3 pr-0 lg:px-5 bg-white fixed top-0 left-0 right-0 z-30 shadow">
         <div className="flex justify-between items-center mb-2 text-sm h-10">
           <p className="text-red-600 w-60 sm:w-auto">
@@ -65,7 +65,7 @@ export default function Header() {
               </button>
             </li>
             <li className="relative">
-              <Link to="/wishlist">
+              <Link to="/favourites">
                 <button className="flex w-12 h-12 relative">
                   <CiHeart className="m-auto w-5 h-5 cursor-pointer" />
                   {wishlistCount > 0 && (
@@ -90,10 +90,8 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Push content down under fixed header */}
       <div className="h-[120px] lg:h-0" />
 
-      {/* Dropdown for SHOP NOW */}
       {showDropdown && (
         <div
           ref={dropdownRef}
@@ -131,7 +129,7 @@ export default function Header() {
           </div>
         </div>
       )}
-      <nav className="flex justify-center items-center lg:justify-start lg:fixed lg:top-[4.7rem] lg:left-[8.75rem] font-black pb-3 lg:mb-0 sticky top-0 lg:z-30 border-b border-gray-200 md:border-0 z-500">
+      <nav className="flex justify-center items-center lg:justify-start lg:fixed lg:top-[4.7rem] lg:left-[8.75rem] font-black pb-3 lg:mb-0 sticky top-0 lg:z-30 border-b border-gray-200 md:border-0 ">
         <ul className="flex gap-x-9 font-medium text-sm mt-3.5 lg:mt-0">
           <li>
             <NavLink
