@@ -4,8 +4,12 @@ import { FiPlus, FiMinus } from "react-icons/fi";
 import { IoIosSearch } from "react-icons/io";
 import { RxPerson } from "react-icons/rx";
 import { CiHeart, CiBag1, CiMenuBurger } from "react-icons/ci";
+import { useWishlist } from "./WishlistContext";
+
 export default function Header() {
   const [showDiv, setShowDiv] = useState(true);
+  const { wishlist } = useWishlist();
+  const wishlistCount = Object.keys(wishlist).length;
 
   return (
     <div className="relative z-501 ">
@@ -75,11 +79,19 @@ export default function Header() {
                   <RxPerson className="m-auto w-5 h-5 cursor-pointer" />
                 </button>
               </li>
-              <li>
-                <button className=" flex w-12 h-12">
-                  <CiHeart className="m-auto w-5 h-5 cursor-pointer" />
-                </button>
+              <li className="relative">
+                <Link to="/wishlist">
+                  <button className="flex w-12 h-12 relative">
+                    <CiHeart className="m-auto w-5 h-5 cursor-pointer" />
+                    {wishlistCount > 0 && (
+                      <span className="absolute top-1 right-1 bg-red-600 text-white overflow-hidden text-[10px] md:text-xs rounded-full w-4 h-4 flex items-center justify-center font-bold md:text">
+                        {wishlistCount}
+                      </span>
+                    )}
+                  </button>
+                </Link>
               </li>
+
               <li>
                 <button className=" flex w-12 h-12">
                   <CiBag1 className="m-auto w-5 h-5 cursor-pointer" />
