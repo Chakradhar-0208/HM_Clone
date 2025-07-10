@@ -18,10 +18,9 @@ export default function Favourites() {
 
   if (items.length === 0) {
     return (
-      <div className="p-6  text-center text-gray-500">
-        {/* Favourites is empty. */}
-
-        FAVOURITES IS EMPTY.
+      <div className="p-6 lg:mt-[140px] mt-[15px] min-h-[80dvh] text-">
+        0 ITEMS <br />
+        Tap the heart icon on items to save them here.
       </div>
     );
   }
