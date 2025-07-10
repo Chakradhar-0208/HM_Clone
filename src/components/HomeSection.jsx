@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useState } from "react";
+import { useWishlist } from "./WishlistContext";
 import { FiPlus, FiFilter } from "react-icons/fi";
 const homeSections = {
   summerBedding: {
@@ -305,14 +305,8 @@ export default function HomeSection() {
     return <div className="p-6 text-red-600">404: Section not Found</div>;
   }
   const product = section.products || {};
-  const [wishlist, setWishlist] = useState({});
+  const { wishlist, toggleWishlist } = useWishlist();
 
-  const toggleWishlist = (key) => {
-    setWishlist((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
-  };
   return (
     <div className="lg:mt-[130px]">
       <div className="p-6">
@@ -333,19 +327,23 @@ export default function HomeSection() {
         {Object.entries(product).map(([key, product]) => (
           <div key={key} className="w-[50%] md:w-[25%]">
             <div>
-              <img src={product.image} alt={product.title} className="w-full" />
               <img
-                onClick={() => {
-                  toggleWishlist(key);
-                }}
-                className="relative  -translate-y-8 left-[85%] sm:left-[90%] md:left-[85%] lg:left-[90%] w-5 h-5 fill-white cursor-pointer"
+                src={product.image}
+                alt={product.title}
+                className="w-full"
+                loading="lazy"
+              />
+
+              <img
+                onClick={() => toggleWishlist(key, product)}
+                className="relative -translate-y-8 left-[85%] sm:left-[90%] md:left-[85%] lg:left-[90%] w-5 h-5 fill-white cursor-pointer"
                 src={
                   wishlist[key]
                     ? "https://res.cloudinary.com/dppnjyn8a/image/upload/v1751882673/rro2nzzvvy3lbzkbtbmk.png"
                     : "https://res.cloudinary.com/dppnjyn8a/image/upload/v1751882702/emr1pnwelzy5uzbrx1d7.png"
                 }
-                alt="like--v1"
-              ></img>
+                alt="like"
+              />
             </div>
             <div className="  py-2 -mt-5 lg:text-base text-sm pl-2">
               <p className="font-medium">{product.title}</p>
