@@ -35,57 +35,64 @@ export default function Ladies() {
 
       <div className="xl:w-[50vw] mx-auto mt-[5rem] lg:mb-[18rem] ">
         <div className="flex w-full">
-         <Link to="/ladies/tops"> <div className="group">
-            <img
-              loading="lazy"
-              className="lg:w-[50vw] "
-              src="https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/wk26/Tops-CE-wk26.jpg?imwidth=1536   "
-              alt="  "
-            />
-            <div className="flex flex-col px-1 py-3">
-              <p className="group-hover:underline">TOPS</p>
-              <p className=" cursor-pointer text-xs ">EXPLORE</p>
+          <Link to="/ladies/tops">
+            {" "}
+            <div className="group">
+              <img
+                loading="lazy"
+                className="lg:w-[50vw] "
+                src="https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/wk26/Tops-CE-wk26.jpg?imwidth=1536   "
+                alt="  "
+              />
+              <div className="flex flex-col px-1 py-3">
+                <p className="group-hover:underline">TOPS</p>
+                <p className=" cursor-pointer text-xs ">EXPLORE</p>
+              </div>
             </div>
-          </div></Link>
-          <Link to="/ladies/dresses"><div className="group">
-            <img
-              loading="lazy"
-              src="https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/wk26/Dresses-CE-wk26.jpg?imwidth=1536"
-              alt=" "
-              className="lg:w-[50vw]"
-            />
-            <div className="flex flex-col px-1 py-3 ">
-              <p className="group-hover:underline">DRESSES</p>
-              <p className=" cursor-pointer text-xs none">EXPLORE</p>
+          </Link>
+          <Link to="/ladies/dresses">
+            <div className="group">
+              <img
+                loading="lazy"
+                src="https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/wk26/Dresses-CE-wk26.jpg?imwidth=1536"
+                alt=" "
+                className="lg:w-[50vw]"
+              />
+              <div className="flex flex-col px-1 py-3 ">
+                <p className="group-hover:underline">DRESSES</p>
+                <p className=" cursor-pointer text-xs none">EXPLORE</p>
+              </div>
             </div>
-          </div></Link>
+          </Link>
         </div>
         <div className="flex w-full  mt-12 mb-5 ">
-          <Link to="/ladies/trousers"><div className="group">
-            <img
-              loading="lazy"
-              className="lg:w-[50vw] "
-              src="https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/wk26/Trousers-CE-wk26.jpg?imwidth=1536"
-              alt="  "
-            />
-            <div className="flex flex-col px-1 py-3">
-              <p className="group-hover:underline">TROUSERS</p>
-              <p className=" cursor-pointer text-xs">EXPLORE</p>
+          <Link to="/ladies/trousers">
+            <div className="group">
+              <img
+                loading="lazy"
+                className="lg:w-[50vw] "
+                src="https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/wk26/Trousers-CE-wk26.jpg?imwidth=1536"
+                alt="  "
+              />
+              <div className="flex flex-col px-1 py-3">
+                <p className="group-hover:underline">TROUSERS</p>
+                <p className=" cursor-pointer text-xs">EXPLORE</p>
+              </div>
             </div>
-          </div></Link>
+          </Link>
           <Link to="/ladies/shirts">
-          <div className="group">
-            <img
-              loading="lazy"
-              src="https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/wk26/Shirts-CE-wk26.jpg?imwidth=1536"
-              alt=" "
-              className="lg:w-[50vw]"
-            />
-            <div className="flex flex-col px-1 py-3">
-              <p className="group-hover:underline">SHIRTS</p>
-              <p className=" cursor-pointer text-xs">EXPLORE</p>
+            <div className="group">
+              <img
+                loading="lazy"
+                src="https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/wk26/Shirts-CE-wk26.jpg?imwidth=1536"
+                alt=" "
+                className="lg:w-[50vw]"
+              />
+              <div className="flex flex-col px-1 py-3">
+                <p className="group-hover:underline">SHIRTS</p>
+                <p className=" cursor-pointer text-xs">EXPLORE</p>
+              </div>
             </div>
-          </div>
           </Link>
         </div>
         <div className="w-[99vw] lg:absolute left-0  px-5 py-2 ">
