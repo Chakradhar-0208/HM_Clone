@@ -17,7 +17,7 @@ export default function Hero() {
         {
           <>
             <div
-              className={`w-full md:h-[75vh] lg:h-[80vh] h-[60vh] absolute lg:top-32 md:top-40.5 top-41.5 z-500 bg-[#000000c5] 
+              className={`w-full md:h-[75vh] lg:h-[80vh] h-[60vh] absolute lg:top-32 md:top-40.5 top-41.5 z-00 bg-[#000000c5] 
                 transition-opacity duration-700 ease-in-out 
                 ${showList ? "opacity-100" : "opacity-0 pointer-events-none"}`}
             ></div>
