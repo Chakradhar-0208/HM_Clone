@@ -15,19 +15,32 @@ export default function Favourites() {
       setRemoving(null);
     }, 300);
   };
-
-  if (items.length === 0) {
-    return (
-      <div className="p-6 lg:mt-[140px] mt-[15px] min-h-[80dvh] text-">
-        0 ITEMS <br />
-        Tap the heart icon on items to save them here.
-      </div>
-    );
+  let itemCountMessage;
+  if (!items.length) {
+    itemCountMessage = <>0 ITEMS</>;
+  } else {
+    itemCountMessage = `${items.length} ITEMS`;
   }
 
   return (
     <div className="lg:mt-[140px] mt-[15px] min-h-[80dvh]">
       <h2 className="text-3xl font-bold mb-4 px-6 ">FAVOURITES</h2>
+      <div className="flex justify-between px-6 mt-6 mb-2 text-sm items-center  text-gray-600">
+        <div className="">{itemCountMessage}</div>
+        <div
+          className="underline outline-offset-2 cursor-pointer text-xs  md:text-sm"
+          onClick={() => {
+            items.forEach(([key, item]) => toggleWishlist(key, item));
+          }}
+        >
+          CLEAR FAVOURITES
+        </div>
+      </div>
+      <div className="flex justify-center">
+        <br />
+        <br />
+        {!items.length && "Tap the heart icon on items to save them here."}
+      </div>
       <div className="flex flex-wrap">
         {items.map(([key, item]) => (
           <div
