@@ -321,14 +321,12 @@ export default function LadiesSection() {
   const sortedAndFilteredProducts = useMemo(() => {
     let items = Object.entries(section.products || {});
 
-    // Apply filter
     if (priceFilter === "below_1000") {
       items = items.filter(([_, prod]) => prod.price < 1000);
     } else if (priceFilter === "above_1000") {
       items = items.filter(([_, prod]) => prod.price >= 1000);
     }
 
-    // Apply sort
     if (sortOption === "price_asc") {
       items.sort((a, b) => a[1].price - b[1].price);
     } else if (sortOption === "price_desc") {
@@ -387,15 +385,12 @@ export default function LadiesSection() {
 
       <div className="flex flex-wrap">
         {sortedAndFilteredProducts.map(([key, prod]) => (
-          <div key={key} className="w-[50%] md:w-[25%]">
+          <div
+            key={key}
+            className="w-[50%] md:w-[25%] border-[1px] border-gray-100 "
+          >
             <div>
-              <img
-                src={prod.image}
-                alt={prod.title}
-                className="w-full"
-                loading="lazy"
-              />
-
+              <img src={prod.image} alt={prod.title} className="w-full" />
               <img
                 onClick={() => toggleWishlist(key, prod)}
                 className="relative -translate-y-8 left-[85%] sm:left-[90%] md:left-[85%] lg:left-[90%] w-5 h-5 fill-white cursor-pointer"
@@ -407,14 +402,17 @@ export default function LadiesSection() {
                 alt="like"
               />
             </div>
-            <div className="  py-2 -mt-5 lg:text-base text-sm pl-2">
+            <div className="py-2 -mt-5 lg:text-base text-sm px-2  flex flex-col justify-between min-h-20">
               <p className="font-medium">{prod.title}</p>
-              <strong>
-                ₹{" "}
-                {new Intl.NumberFormat("en-IN", {
-                  minimumFractionDigits: 2,
-                }).format(prod.price)}
-              </strong>
+              <div className="flex justify-between items-center ">
+                <strong>
+                  ₹{" "}
+                  {new Intl.NumberFormat("en-IN", {
+                    minimumFractionDigits: 2,
+                  }).format(prod.price)}
+                </strong>{" "}
+                <div className="underline text-xs">ADD TO CART</div>
+              </div>
             </div>
           </div>
         ))}
