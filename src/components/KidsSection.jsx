@@ -381,14 +381,12 @@ export default function KidsSection() {
   const sortedAndFilteredProducts = useMemo(() => {
     let items = Object.entries(section.products || {});
 
-    // Apply filter
     if (priceFilter === "below_1000") {
       items = items.filter(([_, prod]) => prod.price < 1000);
     } else if (priceFilter === "above_1000") {
       items = items.filter(([_, prod]) => prod.price >= 1000);
     }
 
-    // Apply sort
     if (sortOption === "price_asc") {
       items.sort((a, b) => a[1].price - b[1].price);
     } else if (sortOption === "price_desc") {
