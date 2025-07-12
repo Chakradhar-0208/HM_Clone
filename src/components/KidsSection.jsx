@@ -3,314 +3,378 @@ import { FiPlus, FiFilter } from "react-icons/fi";
 import { useWishlist } from "./WishlistContext";
 import Toast from "./Toast";
 const KidsSections = {
-  new_styles: {
-    title: "NEW STYLES",
+  new_arrivals: {
+    title: "NEW ARRIVALS",
     image:
-      "https://image.hm.com/content/dam/global_campaigns/season_02/men/start-page-assets/w27/MS32LH4-4x5-wk27.jpg?imwidth=4800",
+      "https://image.hm.com/content/dam/global_campaigns/season_02/kids/start-page-assets/w27/KS32L-2x3-NS-kids-start-page-prio-week-27.jpg",
     products: {
-      regularBoxy_style: {
-        title: "REGULAR FIT BOXY-STYLE POPLIN SHIRT",
-        price: "1,499.00",
+      patternedCottonDress: {
+        title: "PATTERNED COTTON DRESS",
+        price: "399.00",
         image:
-          "	https://image.hm.com/assets/hm/e9/8f/e98f0a27f823e19df3b0d4142c0d7d6149dfb681.jpg?imwidth=1536",
+          "	https://image.hm.com/assets/hm/14/03/140384fb3164ccd028b9f5e848e2ccf8f484dec1.jpg?imwidth=1536",
       },
-      looseFitBoxy_style: {
-        title: "LOOSE FIT BOXY-STYLE T-SHIRT",
-        price: "1,499.00",
+      flaredLeggins: {
+        title: "FLARED LEGGINGS",
+        price: "799.00",
         image:
-          "	https://image.hm.com/assets/hm/54/91/5491cc032fb37f2663471095acf3b8120566f431.jpg?imwidth=1536",
-      },
-
-      relaxFit_Trousers: {
-        title: "RELAXED FIT TROUSERS",
-        price: "2,799.00",
-        image:
-          "	https://image.hm.com/assets/hm/ae/91/ae91e111130885bd2d4ec66b915f6189347b72cb.jpg?imwidth=1536",
-      },
-      regFit_DenimResort: {
-        title: "REGULAR FIT DENIM RESORT SHIRT",
-        price: "2,799.00",
-        image:
-          "https://image.hm.com/assets/hm/c4/bf/c4bfb12a2e4c16d18000414147124497d6afb500.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/d8/38/d838664ef4570f1e59ad476178c330476e14eda1.jpg?imwidth=1536",
       },
 
-      oversizedFit_CroppedTee: {
-        title: "OVERSIZED FIT CROPPED T-SHIRT",
-        price: "2,299.00",
+      superStretchFlared: {
+        title: "SUPERSTRECH FLARE LEG JEANS",
+        price: "999.00",
         image:
-          "	https://image.hm.com/assets/hm/ea/db/eadb69b04a17c57c786febe3837cf16e577ed003.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/f1/f2/f1f2b3ecccd703423712e07f4120de3293bec568.jpg?imwidth=1536",
       },
-      oversizedFit_TeeLinen: {
-        title: "OVERSIZED FIT T-SHIRT",
+      ribbedCottonTop: {
+        title: "RIBBED COTTON TOP",
+        price: "699.00",
+        image:
+          "	https://image.hm.com/assets/hm/63/fe/63feb582f198acece99df33db5b12520ee8b9799.jpg?imwidth=1536",
+      },
+
+      aLineDress: {
+        title: "A-LINE DRESS",
         price: "1,999.00",
         image:
-          "https://image.hm.com/assets/hm/b1/7e/b17e7622265d2ce5d33ea8003fc6ed8a5eabc84d.jpg?imwidth=1536",
+          "	https://image.hm.com/assets/hm/d6/7c/d67cd5fa0de3a4cf424b3c97fbdd902b23ce9557.jpg?imwidth=1536",
       },
-      oversizedFit_LongSleeved: {
-        title: "OVERSIZED FIT LONG-SLEEVED JERSEY TOP",
-        price: "2,299.00",
+      frilTrimmedStrap: {
+        title: "FRILL-TRIMMED STRAPY DRESS",
+        price: "1,999.00",
         image:
-          "https://image.hm.com/assets/hm/e6/84/e684befb9b9a1658ecaafc089724ee5801eceb00.jpg?imwidth=1536",
+          "	https://image.hm.com/assets/hm/28/ca/28ca3a4a7be65ed4bb29441131d3207b7ce7549d.jpg?imwidth=1536",
       },
-      oversizedFit_ShortSleeve: {
-        title: "OVERSIZED FIT SHORT-SLEEEVD LINEN-BLEND SHIRT",
-        price: "2,299.00",
-        colors: ["red", "blue", "white"],
+      twoPackRibbedCotton: {
+        title: "TWO PACK RIBBED COTTON TOPS",
+        price: "1,499.00",
         image:
-          "https://image.hm.com/assets/hm/49/f9/49f92beb6c0dd4807301347264a8a3c7519f5a1a.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/86/55/8655d7b07765ef09d194382c0af9b32084f42627.jpg?imwidth=1536",
+      },
+      M: {
+        title: "RIBBED COTTON TOP",
+        price: "699.00",
+        image:
+          "https://image.hm.com/assets/hm/bf/48/bf48973c8a05edc67161d4ceeed51feb9b4c2d06.jpg?imwidth=1536",
       },
     },
   },
-  linen_looks: {
-    title: "LINEN LOOKS",
+  legoHome: {
+    title: "LEGO HOME",
+    image:
+      "https://image.hm.com/content/dam/global_campaigns/season_02/kids/start-page-assets/w27/KS32L-2x3-NS-kids-start-page-prio-week-27.jpg",
+    products: {
+      canvasRug: {
+        title: "CANVAS RUG",
+        price: "4,999.00",
+        image:
+          "https://image.hm.com/assets/hm/79/68/796869815f4a0f9dcdcbeb581f50e628e65caf0a.jpg?imwidth=1536",
+      },
+      childrensPoster: {
+        title: "CHILDREN'S POSTER HANGER AND POSTER",
+        price: "999.00",
+        image:
+          "https://image.hm.com/assets/hm/87/0d/870d86ce708b54d329d7fcdc590ac5584f34d6b7.jpg?imwidth=1536",
+      },
+
+      canvasToyStorage: {
+        title: "CANVAS TOY STORAGE BASKET",
+        price: "1,399.00",
+        image:
+          "https://image.hm.com/assets/hm/cc/5d/cc5d54cfa465513db1c4d6177fa895fab6458214.jpg?imwidth=1536",
+      },
+      patternedDeskPad: {
+        title: "PATTERNED DESK PAD",
+        price: "799.00",
+        image:
+          "https://image.hm.com/assets/hm/27/c6/27c60281673b33b306e8037a1fed24e034b13747.jpg?imwidth=1536",
+      },
+
+      PatternedBathTowel: {
+        title: "PATTERNED BATH TOWEL",
+        price: "799.00",
+        image:
+          "https://image.hm.com/assets/hm/6c/e7/6ce7eb0d0c67ec1b763dcfd720526a6f8fd3eb49.jpg?imwidth=1536",
+      },
+      patternedGymBag: {
+        title: "PATTERNED GYM BAG",
+        price: "799.00",
+        image:
+          "https://image.hm.com/assets/hm/3c/c7/3cc7a7ba5f74a344d8066bc8a1f7206fc48a0e08.jpg?imwidth=1536",
+      },
+      patternedCushionCover: {
+        title: "PATTERNED CUSHION COVER",
+        price: "399.00",
+        image:
+          "https://image.hm.com/assets/hm/a8/5e/a85ec2525a52ce83c0b00ee444ece916fa600e42.jpg?imwidth=1536",
+      },
+      patternedBathTowel: {
+        title: "PATTERNED BATH TOWEL",
+        price: "799.00",
+        image:
+          "https://image.hm.com/assets/hm/9a/52/9a529fff92031e98b8f2bb6cdbd293bcc8096734.jpg?imwidth=1536",
+      },
+    },
+  },
+  playful_statements: {
+    title: "PLAYFUL STATEMENTS",
     image:
       "https://image.hm.com/content/dam/global_campaigns/season_02/men/start-page-assets/w27/MS32E1-2x3-wk27.jpg?imwidth=4800",
     products: {
-      regFit_LinenBlendTrousers: {
-        title: "REGULAR FIT LINEN-BLEND TROUSERS",
-        price: "2,999.00",
+      printedTee: {
+        title: "PRINTED T-SHIRT",
+        price: "399.00",
         image:
-          "https://image.hm.com/assets/hm/de/74/de74869d8c461f1455bb800621bf4a38be9d8030.jpg?imwidth=1536",
-      },
-      linenJacket: {
-        title: "SLIM FIT LINEN JACKET",
-        price: "5,999.00",
-        image:
-          "https://image.hm.com/assets/hm/3f/62/3f62e6d763adc4e1d1c101a987e7d063afa50c74.jpg?imwidth=1536",
-      },
-      regFit_ResortShirt: {
-        title: "REGULAR FIT LINEN-BLEND RESORT SHIRT",
-        price: "2,799.00",
-        image:
-          "	https://image.hm.com/assets/hm/d7/b9/d7b939dcd7f4e0b9fca6ef65a4f01d689efa75e1.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/e6/79/e6794dbd62cf4968b9e25fd8d4cf6013f4942c27.jpg?imwidth=1536",
       },
 
-      regFit_Trousers: {
-        title: "REGULAR FIT LINEN-BLEND TROUSERS",
-        price: "2,799.00",
+      twillChinos: {
+        title: "TWILL CHINOS",
+        price: "699.00",
         image:
-          "https://image.hm.com/assets/hm/b0/43/b043f0f0eeaba1bcf1ea0d7937bfe6bd48925a05.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/b6/e3/b6e3664161b90896c19fddc1a15a9ef4424a22ad.jpg?imwidth=1536",
       },
-      regFit_LinenTrousers: {
-        title: "REGULAR FIT LINEN TROUSERS",
-        price: "3,999.00",
+      printedTeePattern: {
+        title: "PRINTED T-SHIRT",
+        price: "399.00",
         image:
-          "	https://image.hm.com/assets/hm/5a/d4/5ad4bcc26516c84b234c6d3e93d281ed8083545c.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/d5/dc/d5dc31b9800d3acd15dc77079f6c5bf6a0d8609a.jpg?imwidth=1536",
       },
-      regFit_leninShirt: {
-        title: "REGULAR FIT LINEN SHIRT",
-        price: "2,999.00",
+      cap: {
+        title: "CAP",
+        price: "799.00",
         image:
-          "	https://image.hm.com/assets/hm/eb/0b/eb0beb93a43c9f3e8049a962da292fad1ab2cc02.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/bb/d2/bbd26feb1837ab893a61140a1734c329ac8b36da.jpg?imwidth=1536",
       },
-      regFit_LinenBlendShorts: {
-        title: "REGULAR FIT LINEN-BLEND SHORTS",
+
+      fivePaclJerseyTee: {
+        title: "5-PACK JERSEY T-SHIRT",
         price: "1,999.00",
         image:
-          "https://image.hm.com/assets/hm/93/70/9370069dcd241ae49a40ad5a4582d9d57ba91682.jpg?imwidth=1536",
+          "	https://image.hm.com/assets/hm/0c/00/0c00e957a33af24f5dc93590b980796f9940f466.jpg?imwidth=1536",
       },
-      regFit_Shirt: {
-        title: "REGULAR FIT LINEN-BLEND SHIRT",
-        price: "2,299.00",
+      texturedKnit: {
+        title: "TEXTURED-KNIT SHIRT",
+        price: "1,499.00",
         image:
-          "	https://image.hm.com/assets/hm/86/3d/863d5017d6333e8c44d5a8d766b8fdf8cb2177b1.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/11/a6/11a663482d1449cc70d5775a99d43707d6ab63b7.jpg?imwidth=1536",
+      },
+
+      printedVestTop: {
+        title: "PRINTED VEST TOP",
+        price: "399.00",
+        image:
+          "https://image.hm.com/assets/hm/fc/9c/fc9cca39ede33eaaf0afea9b83c058f530ec05fd.jpg?imwidth=1536",
+      },
+      printedSweatShorts: {
+        title: "PRINTED SWEATSHORTS",
+        price: "699.00",
+        image:
+          "https://image.hm.com/assets/hm/b3/f4/b3f4635093506af6fac9a9dacff662d8701292fc.jpg?imwidth=1536",
       },
     },
   },
-  jeans: {
-    title: "JEANS",
+
+  baby: {
+    title: "BABY CLOTHES",
     image:
       "https://image.hm.com/content/dam/global_campaigns/season_02/men/start-page-assets/w27/Jeans-CE-wk-27-30.jpg??imwidth=1536",
     products: {
-      relaxedJeans: {
-        title: "RELAXED JEANS",
-        price: "1,999.00",
-        image:
-          "https://image.hm.com/assets/hm/e5/29/e529a515f56d9f12632954548173f86c9c6e5c68.jpg?imwidth=1536",
-      },
-      looseJEans: {
-        title: "LOOSE JEANS",
-        price: "2,299.00",
-        image:
-          "https://image.hm.com/assets/hm/61/d0/61d03fa770ad1c6a31fb8919798dc83ea8d3bdec.jpg?imwidth=1536",
-      },
-      strRegJeans: {
-        title: "STRAIGHT REGULAR JEANS",
+      threePieceCottonSet: {
+        title: "3-PIECE COTTION SET",
         price: "1,799.00",
         image:
-          "https://image.hm.com/assets/hm/47/22/4722ecac7c278331feffe1037d238d13da7606aa.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/ca/40/ca40d66cb54d86b578e4ed544aa09c2051e2eabc.jpg?imwidth=1536",
       },
-      regJeans: {
-        title: "REGULAR JEANS",
-        price: "2,299.00",
+      printedCottonDress: {
+        title: "PRINTED COTTON DRESS",
+        price: "399.00",
         image:
-          "https://image.hm.com/assets/hm/ee/46/ee46c3b15e2d01a75624730fe481482e5f9ffbaa.jpg?imwidth=1536 ",
+          "https://image.hm.com/assets/hm/ce/1c/ce1cb680398fee38409f7f765f229af5e1d3cee2.jpg?imwidth=1536",
       },
-      looseJeans: {
-        title: "LOOSE JEANS",
-        price: "2,299.00",
+      slimFitJeans: {
+        title: "SLIM FIT JEANS",
+        price: "799.00",
         image:
-          "https://image.hm.com/assets/hm/c7/8b/c78b07056276ddaabce1bcfab3709e78976a756a.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/72/cf/72cfbd35cc112be50e5181ed7e68b76592efdc00.jpg?imwidth=1536",
+      },
+      twoPieceSet: {
+        title: "2-PIECE SET",
+        price: "999.00",
+        image:
+          "https://image.hm.com/assets/hm/ce/cf/cecf4365db692aa42dd3c2508614366da387b4c8.jpg?imwidth=1536",
+      },
+      denimDungaree: {
+        title: "DENIM DUNGAREE SHORTS",
+        price: "1,499.00",
+        image:
+          "https://image.hm.com/assets/hm/07/a2/07a2b980aede93da7413aab8c6e5809b7e196d27.jpg?imwidth=1536",
 
         //
       },
-      baggyJeans: {
-        title: "BAGGY JEANS",
-        price: "2,699.00",
+      printedottonTee: {
+        title: "PRINTED COTTION",
+        price: "399.00",
         image:
-          "https://image.hm.com/assets/hm/b9/db/b9dbcc63d87071fdff2eb964c78cb5fbe64f941e.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/22/1b/221bbbd79bfb66b0d82f141bdfc3c628bf95a84d.jpg?imwidth=1536",
       },
     },
   },
-  shirts: {
+  kids2_8: {
     title: "SHIRTS",
     image:
       "https://image.hm.com/content/dam/global_campaigns/season_02/men/start-page-assets/w27/Shirts-CE-wk-27-30.jpg?imwidth=1536",
     products: {
-      oxfordShirt: {
-        title: "REGULAR FIT OXFORD SHIRT",
+      flaredLegJeans: {
+        title: "FLARED LEG JEANS",
         price: "1,499.00",
         image:
-          "https://image.hm.com/assets/hm/52/10/52105f881ef33f3d7169d696549f9804235b27d2.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/bc/b5/bcb58ef8779c1ef9838eb5c2ec9b5e26316704d8.jpg?imwidth=1536",
       },
-      sFit_EasyIron: {
-        title: "SLIM FIT EASY IRON SHIRT",
-        price: "1,499.00",
-        image:
-          "https://image.hm.com/assets/hm/7d/85/7d851e3124bd16c0b743eeaf32ec07434fe94ef4.jpg?imwidth=1536",
-      },
-      regFit_JerseyShirt: {
-        title: "REGULAR FIT JERSEY SHIRT",
-        price: "1,499.00",
-        image:
-          "https://image.hm.com/assets/hm/67/02/670291a5cbb8a731ed59bc1087938b2513307d82.jpg?imwidth=1536",
-      },
-      regFitTexturedShirt: {
-        title: "REGULAR FIT TEXTURED SHIRT",
+      threePackJoggers: {
+        title: "3-PACK JOGGERS",
         price: "1,999.00",
         image:
-          "https://image.hm.com/assets/hm/fe/6d/fe6d9ffb9b77de605f991308c20e39973c54e79e.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/63/05/6305b20c8ee2c18647563548c79d157a3836126f.jpg?imwidth=1536",
       },
-      regFit_LinenBlendShirt: {
-        title: "REGUALAR FIT LINEN-BASED SHIRT",
-        price: "2,299.00",
+      wideLegPaperBag: {
+        title: "WIDE LEG PAPER BAG JEANS",
+        price: "1,499.00",
         image:
-          "https://image.hm.com/assets/hm/d8/e5/d8e5b0bf21d9cff160f1b9e5d3f0ab699245d101.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/63/5c/635cdadd375a91edba1ad7916f1a066bff5cd122.jpg?imwidth=1536",
       },
-      psleeved: {
-        title: "REGULAR FIT SHORT-SLEEVED SHIRT",
+      twoPackLeggings: {
+        title: "2-PACK LEGGINGS",
+        price: "799.00",
+        image:
+          "https://image.hm.com/assets/hm/c6/b8/c6b89b8e9629918ec9ee8586323c8efa99201a19.jpg?imwidth=1536",
+      },
+      fivePackJerseyTops: {
+        title: "5-PACK JERSEY TOPS",
         price: "1,999.00",
         image:
-          "https://image.hm.com/assets/hm/27/31/2731407a9a29cdb96bcde097e8916dc9fb87a851.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/fa/65/fa65b9b320757ce3608df86a09cb71ac3e33162b.jpg?imwidth=1536",
+      },
+      brushedInsideJogger: {
+        title: "BRUSHED-INSIDE JOGGERS",
+        price: "799.00",
+        image:
+          "https://image.hm.com/assets/hm/51/24/512401ba78a770ab3774d01ed456e80d4fe2e6fe.jpg?imwidth=1536",
       },
     },
   },
-  trousers: {
-    title: "TROUSERS",
+  kids9_14: {
+    title: "kids9_14",
     image:
       "https://image.hm.com/content/dam/global_campaigns/season_02/men/start-page-assets/w27/Trousers-CE-wk-27-30.jpg?imwidth=1536",
     products: {
-      looseFit_SweatPants: {
-        title: "LOOSE FIT SWEATPANTS",
-        price: "1,499.00",
+      printedCottonTee: {
+        title: "PRINTED COTTON T-SHIRT",
+        price: "999.00",
         image:
-          "https://image.hm.com/assets/hm/b8/67/b86734fe7367cfd1a545f66d1bb28c3e6a1d5880.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/2f/d6/2fd66839a22d703aa41447a31373f099aa4e18ec.jpg?imwidth=1536",
       },
-      regFit_LinenBlendTrousers: {
-        title: "REGULAR FIT LINEN-BLEND TROUSERS",
-        price: "2,799.00",
+      meshBasketballVest: {
+        title: "MESH BASKETBALL SET",
+        price: "999.00",
         image:
-          "https://image.hm.com/assets/hm/04/27/0427a2d720c824973c9b60217164a14d47727462.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/50/24/5024cbb6b864343abf396d296e0fd9b02e7eb638.jpg?imwidth=1536",
       },
-      looseFit_SweatPants1: {
-        title: "LOOSE FIT SWEATPANTS",
-        price: "1,499.00",
+      printMotifTee: {
+        title: "PRINTE-MOTIF T-SHIRT",
+        price: "699.00",
         image:
-          "https://image.hm.com/assets/hm/a6/28/a628282d3795642d3779ee152dae10b66674e063.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/f3/32/f33211b761c1b8892b81401f45d505871d5fa202.jpg?imwidth=1536",
       },
-      looseFit_Cargo: {
-        title: "LOOSE FIT CARGO TROUSERS",
-        price: "1,999.00",
+      twoPackCottonLeg: {
+        title: "2-PACK COTTON LEGGNINGS",
+        price: "1,299.00",
         image:
-          "https://image.hm.com/assets/hm/3f/e3/3fe3a1b14e5eb0e3bc524b90fe45d55a0667574f.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/ed/bc/edbce1b7eaec49e7583a9b7ba43c64b991cd48ca.jpg?imwidth=1536",
       },
-      relaxFit_Trousers: {
-        title: "RELAXED FIT TROUSERS",
-        price: "2,799.00",
+      denimLookSkirt: {
+        title: "DENIM LOOK SKIRT",
+        price: "1,299.00",
         image:
-          "https://image.hm.com/assets/hm/04/13/0413f5010ec537b8dc3c3e4779658e0b7c4ac7f3.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/34/3d/343dab1cfe61a06dc7e12f79c14fa07013861f05.jpg?imwidth=1536",
       },
-      cottonTwill_Trousers: {
-        title: "SLIM FIT COTTON FWILL TROUSERS",
-        price: "1,499.00",
+      meshBasketballShorts: {
+        title: "MESH BASKETBALL SHORTS",
+        price: "1,299.00",
         image:
-          "https://image.hm.com/assets/hm/96/39/96390ccf7926244ba128b431f09895bf40ab2067.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/39/a3/39a3cc870749ae20e0caf444a5664ca0b72e1612.jpg?imwidth=1536",
       },
     },
   },
-  t_shirts: {
-    title: "MEN'S T-SHIRTS & TOPS",
+  newborn: {
+    title: "NEWBORN",
     image:
       "https://image.hm.com/content/dam/global_campaigns/season_02/men/start-page-assets/w27/T-shirt-Tanks-CE-wk-27-30.jpg?imwidth=1536",
     products: {
-      fivePack_regFit: {
-        title: "5-PACK REGULAR FIT T-SHIRTS",
-        price: "1,999.00",
+      cottonMuslinRomper: {
+        title: "COTTON MUSLIN ROMPER SET",
+        price: "999.00",
         image:
-          "	https://image.hm.com/assets/hm/23/0d/230d25c3d0a7e81992b1c1ec551a17cb32ef5326.jpg?imwidth=1536",
+          "	https://image.hm.com/assets/hm/55/91/5591dad61eeb4fb9e2c6fdc94e9ce75b8fc5779d.jpg?imwidth=1536",
       },
-      threePack_Polo: {
-        title: "3-PACK SLIM FIT POLO T-SHIRTS",
+      twoPieceCottonJersey: {
+        title: "2-PIECE COTTON JERSEY SET",
+        price: "999.00",
+        image:
+          "https://image.hm.com/assets/hm/49/95/4995f779dcecab20596e542b6b30e422106b4301.jpg?imwidth=1536",
+      },
+      cottonDungaree: {
+        title: "COTTON DUNGAREE SET",
+        price: "1,2999.00",
+        image:
+          "	https://image.hm.com/assets/hm/8b/a9/8ba952fc3c7b07dd12b07b1d47badcef850823f7.jpg?imwidth=1536",
+      },
+      eightPieceBodysuit: {
+        title: "8-PIECE BODYSUIT AND TROUSER SET",
         price: "2,299.00",
         image:
-          "https://image.hm.com/assets/hm/8f/46/8f46b4d64de4cae9e9dbb2831ba052eac1769c1d.jpg?imwidth=1536 ",
+          "	https://image.hm.com/assets/hm/37/84/37843ff9ddbb823de7dc1db815490b6088b72871.jpg?imwidth=1536",
       },
-      regFitTee: {
-        title: "REGULAR FIT T-SHIRT",
-        price: "399.00",
+      twoPieceDungarees: {
+        title: "2-PIECE DUNGAREES AND BODYSUIT",
+        price: "1,999.00",
         image:
-          "	https://image.hm.com/assets/hm/ba/f9/baf9ae5354aeeffd3123060ca22d59166d552c6e.jpg?imwidth=1536",
+          "	https://image.hm.com/assets/hm/2c/65/2c650a17052d10859753f425669ffc766dab8529.jpg?imwidth=1536",
       },
-      looseFitTee: {
-        title: "LINEN-BLEND SHIRT",
-        price: "999.00",
+      patternedSleepsuit: {
+        title: "PATTERNED SLEEPSUIT",
+        price: "799",
         image:
-          "	https://image.hm.com/assets/hm/b3/ee/b3ee2503c4e7c8b25f8f1efa1c9428f0061cd0b9.jpg?imwidth=1536",
-      },
-      looseFitPrintedTee: {
-        title: "LOOSE FIT PRINTED T-SHIRT",
-        price: "999.00",
-        image:
-          "	https://image.hm.com/assets/hm/2f/8e/2f8e217352bbbc8c74e6fbcd6ca465729f6711c1.jpg?imwidth=1536",
-      },
-      oversizedFit_Tee: {
-        title: "OVERSIZED FIT T-SHIRT",
-        price: "1,499",
-        image:
-          "	https://image.hm.com/assets/hm/e7/ce/e7ce16aa0811db02ebd05c4db7fdea53d109209b.jpg?imwidth=1536",
+          "https://image.hm.com/assets/hm/dd/e8/dde84f6883cff04e7f3e690264e672745009e9ec.jpg?imwidth=1536",
       },
     },
   },
 };
 
 const sectionTitles = {
-  linen_looks: "THE LINEN",
-  new_styles: "NEW IN",
-  t_shirts: "MEN'S T-SHIRTS & TOPS",
-  jeans: "MEN'S JEANS",
-  trousers: "MEN'S TROUSERS",
-  shirts: "MEN'S SHIRTS",
+  playful_statements: "PLAYFUL STATEMENTS",
+  new_arrivals: "BOHO SUMMER",
+  baby: "BABY CLOTHES",
+  kids2_8: "CLOTHING 2-8Y",
+  kids9_14: "CLOTHING 9-14Y",
+  newborn: "NEWBORN BABY CLOTHES",
+  legoHome: "LEGO® Collection",
 };
 
 export default function MenSection() {
   const { sectionId } = useParams();
   const section = KidsSections[sectionId];
   if (!section) {
-    return <div className="p-6 text-red-600">404: Section not Found</div>;
+    return (
+      <div className="lg:mt-[130px] p-6 text-red-600">
+        404: Section not Found
+      </div>
+    );
   }
 
   const product = section.products || {};
-  const { wishlist, toggleWishlist, toastMessage, clearToast  } = useWishlist();
+  const { wishlist, toggleWishlist, toastMessage, clearToast } = useWishlist();
   return (
     <div className="lg:mt-[130px]">
       <div className="p-6">
@@ -350,7 +414,7 @@ export default function MenSection() {
           </div>
         ))}
       </div>
-       {toastMessage && <Toast message={toastMessage} onClose={clearToast} />}
+      {toastMessage && <Toast message={toastMessage} onClose={clearToast} />}
     </div>
   );
 }
