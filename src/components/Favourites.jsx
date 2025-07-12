@@ -41,7 +41,7 @@ export default function Favourites() {
         <br />
         {!items.length && "Tap the heart icon on items to save them here."}
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap -mt-10">
         {items.map(([key, item]) => (
            <div
             key={key}
