@@ -6,6 +6,7 @@ import {
   FaYoutube,
   FaPinterest,
   FaFacebook,
+  FaGithub,
 } from "react-icons/fa";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -208,8 +209,8 @@ export default function Footer() {
         </div>
       </div>
       <Link to="https://github.com/Chakradhar-0208/">
-        <div className="flex justify-center mt-4 underline underline-offset-2 ">
-          A Clone by Chakradhar K{" "}
+        <div className="flex justify-center mt-4 underline underline-offset-2  gap-2 items-center">
+          <p>A Clone by Chakradhar K</p> <FaGithub className=" w-5 h-5 " />
         </div>
       </Link>
     </footer>
