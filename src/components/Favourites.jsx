@@ -43,29 +43,34 @@ export default function Favourites() {
       </div>
       <div className="flex flex-wrap">
         {items.map(([key, item]) => (
-          <div
+           <div
             key={key}
-            className={`w-[50%] md:w-[25%] transition-all duration-300 ${
-              removing === key ? "opacity-0 scale-90" : "opacity-100"
-            }`}
+            className="w-[50%] md:w-[25%] border-[1px] border-gray-100 "
           >
             <div>
+              <img src={item.image} alt={item.title} className="w-full" />
               <img
-                src={item.image}
-                alt={item.title}
-                className="w-full"
-                loading="lazy"
-              />
-              <img
-                onClick={() => handleRemove(key, item)}
-                className="relative -translate-y-8 left-[85%] w-5 h-5 cursor-pointer"
-                src="https://res.cloudinary.com/dppnjyn8a/image/upload/v1751882673/rro2nzzvvy3lbzkbtbmk.png"
-                alt="liked"
+                onClick={() => toggleWishlist(key, item)}
+                className="relative -translate-y-8 left-[85%] sm:left-[90%] md:left-[85%] lg:left-[90%] w-5 h-5 fill-white cursor-pointer"
+                src={
+                  wishlist[key]
+                    ? "https://res.cloudinary.com/dppnjyn8a/image/upload/v1751882673/rro2nzzvvy3lbzkbtbmk.png"
+                    : "https://res.cloudinary.com/dppnjyn8a/image/upload/v1751882702/emr1pnwelzy5uzbrx1d7.png"
+                }
+                alt="like"
               />
             </div>
-            <div className="py-2 -mt-5 text-sm lg:text-base pl-2">
+            <div className="py-2 -mt-5 lg:text-base text-sm px-2  flex flex-col justify-between min-h-20">
               <p className="font-medium">{item.title}</p>
-              <strong>{`₹ ${item.price}`}</strong>
+              <div className="flex justify-between items-center ">
+                <strong>
+                  ₹{" "}
+                  {new Intl.NumberFormat("en-IN", {
+                    minimumFractionDigits: 2,
+                  }).format(item.price)}
+                </strong>{" "}
+                <div className="underline text-xs">ADD TO CART</div>
+              </div>
             </div>
           </div>
         ))}
