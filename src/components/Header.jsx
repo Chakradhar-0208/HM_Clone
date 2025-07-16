@@ -47,11 +47,11 @@ export default function Header() {
         </div>
 
         <div className="flex justify-between items-center">
-          <img
+           <Link to="/"><img
             src="https://www2.hm.com/hm-logo.png"
             alt="H&M logo"
             className="w-12 lg:w-[60px]"
-          />
+          /></Link>
 
           <ul className="flex items-center">
             <li>
